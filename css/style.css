@@ -528,6 +528,131 @@ img { max-width: 100%; height: auto; display: block; }
   .hero { min-height: 100svh; }
 }
 
+/* ═══════════════════════════════════════════════
+   KORA PREMIUM INTERACTIONS
+   ═══════════════════════════════════════════════ */
+
+/* ── Custom Cursor ── */
+.kora-cursor {
+  position: fixed; top:0; left:0; z-index:99999;
+  width: 8px; height: 8px;
+  background: var(--terracotta);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: transform 0.05s;
+}
+.kora-cursor-ring {
+  position: fixed; top:0; left:0; z-index:99998;
+  width: 32px; height: 32px;
+  border: 1.5px solid var(--terracotta);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: width 0.3s, height 0.3s, border-color 0.3s, background 0.3s;
+}
+.kora-cursor-hover {
+  width: 56px !important;
+  height: 56px !important;
+  border-color: var(--saffron) !important;
+  background: rgba(212,160,48,0.08) !important;
+}
+
+/* ── 3D Tilt Cards ── */
+.kora-tilt {
+  transform: perspective(800px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) scale(var(--s, 1));
+  transition: transform 0.15s ease-out;
+  position: relative;
+  will-change: transform;
+}
+.kora-tilt::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle 120px at var(--gx, 50%) var(--gy, 50%), rgba(196,122,90,0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+
+/* ── Parallax Hero Layers ── */
+.hero-bg {
+  will-change: transform;
+}
+
+/* ── Hero Word Split ── */
+.kora-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ── Reveal Directions ── */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+[data-reveal-dir="up"] { transform: translateY(40px); }
+[data-reveal-dir="left"] { transform: translateX(-40px); }
+[data-reveal-dir="right"] { transform: translateX(40px); }
+
+/* ── Product Card 3D Image ── */
+.product-card-image {
+  perspective: 600px;
+}
+.product-card-image img {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.product-card:hover .product-card-image img {
+  transform: scale(1.06);
+}
+
+/* ── Product Detail Zoom ── */
+.product-detail-image {
+  cursor: crosshair;
+  overflow: hidden;
+}
+.product-detail-image img {
+  transition: transform 0.3s ease-out;
+  transform-origin: center center;
+}
+
+/* ── Magnetic Button Transition ── */
+.btn {
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.15s ease-out !important;
+}
+
+/* ── Craft Section Parallax ── */
+.craft-image {
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* ── Smooth Scrollbar ── */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--terracotta) transparent;
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--terracotta); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--terracotta-dk); }
+
+/* ── Counter Animation ── */
+.stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--serif);
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--terracotta);
+  margin-top: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
 @media (max-width: 480px) {
   .hero-title { font-size: 36px; }
   .nav-inner { padding: 14px 20px; }
