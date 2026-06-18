@@ -10,7 +10,7 @@
 <link rel="canonical" href="https://koracashmere.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style-v8.css">
+<link rel="stylesheet" href="/css/style-v9.css">
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
 
 <!-- Open Graph -->
@@ -449,58 +449,167 @@
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .distinction {
-    padding: 36px 16px;
+    padding: 32px 16px;
   }
   .distinction-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 24px;
   }
+  .distinction-item {
+    padding: 0 8px;
+  }
+  .distinction-icon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 10px;
+  }
+  .distinction-text {
+    font-size: 14px;
+  }
+
   .featured {
-    padding: 56px 16px;
+    padding: 48px 16px;
   }
+  .featured-header {
+    margin-bottom: 36px;
+  }
+  .featured-header p {
+    font-size: 15px;
+  }
+
   .fibre {
-    padding: 56px 16px;
+    padding: 48px 16px;
   }
   .fibre-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
   .fibre-image {
     aspect-ratio: 16 / 10;
     order: -1;
   }
+  .fibre-stats {
+    gap: 12px;
+  }
+  .fibre-stat {
+    padding: 16px 0;
+  }
+  .fibre-text p {
+    font-size: 15px;
+  }
+
   .hands {
-    padding: 56px 16px;
+    padding: 48px 16px;
   }
   .hands-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
   .hands-image {
     order: -1;
   }
+  .hands-text p {
+    font-size: 15px;
+  }
+
   .principles {
-    padding: 56px 16px;
+    padding: 48px 16px;
+  }
+  .principles-header {
+    margin-bottom: 32px;
   }
   .principles-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
   }
   .principle-card {
-    padding: 32px 20px;
+    padding: 28px 20px;
   }
+  .principle-card p {
+    font-size: 14px;
+  }
+  .principle-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 12px;
+  }
+
   .voices {
-    padding: 56px 16px;
+    padding: 48px 16px;
+  }
+  .voices-header {
+    margin-bottom: 32px;
   }
   .voices-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
   }
   .voice-card {
-    padding: 28px 20px;
+    padding: 24px 18px;
   }
+  .voice-text {
+    font-size: 14px;
+  }
+
   .cta-final {
-    padding: 56px 16px;
+    padding: 48px 16px;
+  }
+  .cta-final p {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+}
+
+/* ── Narrow phones ≤480px (foldables) ── */
+@media (max-width: 480px) {
+  .distinction {
+    padding: 24px 12px;
+  }
+  .distinction-grid {
+    gap: 20px;
+  }
+  .distinction-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+  }
+  .distinction-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+  }
+  .distinction-text {
+    font-size: 13px;
+  }
+
+  .fibre-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .fibre-stat-value {
+    font-size: 24px;
+  }
+  .fibre-stat-label {
+    font-size: 10px;
+  }
+
+  .featured-header h2,
+  .fibre-text h2,
+  .hands-text h2,
+  .principles-header h2,
+  .voices-header h2,
+  .cta-final h2 {
+    font-size: 24px;
+  }
+
+  .voices-grid {
+    gap: 12px;
+  }
+  .voice-card {
+    padding: 20px 14px;
+  }
+  .voice-text {
+    font-size: 13px;
   }
 }
 
