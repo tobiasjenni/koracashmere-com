@@ -159,32 +159,50 @@
   color: var(--stone-light);
   line-height: 1.8;
 }
+
+/* Fibre Stats — elegant horizontal bar */
 .fibre-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  margin-top: 16px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(247,242,234,0.08);
+  border-bottom: 1px solid rgba(247,242,234,0.08);
 }
 .fibre-stat {
-  padding: 20px 0;
-  border-top: 1px solid rgba(247,242,234,0.1);
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+.fibre-stat + .fibre-stat::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: rgba(247,242,234,0.1);
 }
 .fibre-stat-value {
   font-family: var(--font-heading);
   font-weight: 500;
-  font-size: 28px;
+  font-size: clamp(32px, 4vw, 44px);
   color: var(--saffron);
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
 .fibre-stat-label {
   font-family: var(--font-body);
   font-weight: 300;
-  font-size: 12px;
-  letter-spacing: 1.5px;
+  font-size: 11px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--stone-light);
+  opacity: 0.7;
 }
+
 .fibre-image {
   aspect-ratio: 4 / 5;
   overflow: hidden;
@@ -489,10 +507,19 @@
     order: -1;
   }
   .fibre-stats {
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 16px 0;
   }
   .fibre-stat {
-    padding: 16px 0;
+    flex: 1 1 50%;
+    padding: 12px 0;
+  }
+  .fibre-stat:nth-child(3)::before {
+    display: none;
+  }
+  .fibre-stat-value {
+    font-size: 28px;
   }
   .fibre-text p {
     font-size: 15px;
@@ -583,14 +610,31 @@
   }
 
   .fibre-stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 0;
+  }
+  .fibre-stat {
+    flex: none;
+    padding: 14px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .fibre-stat + .fibre-stat {
+    border-top: 1px solid rgba(247,242,234,0.06);
+  }
+  .fibre-stat + .fibre-stat::before {
+    display: none;
   }
   .fibre-stat-value {
-    font-size: 24px;
+    font-size: 26px;
+    margin-bottom: 0;
+    min-width: 80px;
   }
   .fibre-stat-label {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .featured-header h2,
@@ -744,20 +788,20 @@
       <p>Each spring, when the goats naturally shed, herders hand-comb the precious fibres. One goat yields only 150 grams per year — barely enough for a single scarf. This scarcity is not a limitation. It is the foundation of everything we make.</p>
       <div class="fibre-stats">
         <div class="fibre-stat">
-          <p class="fibre-stat-value">&lt;16µ</p>
-          <p class="fibre-stat-label">Micron Fineness</p>
+          <p class="fibre-stat-value">&lt; 16 µ</p>
+          <p class="fibre-stat-label">Finer than human hair</p>
         </div>
         <div class="fibre-stat">
-          <p class="fibre-stat-value">150g</p>
-          <p class="fibre-stat-label">Per Goat Per Year</p>
+          <p class="fibre-stat-value">150 g</p>
+          <p class="fibre-stat-label">Yield per goat per year</p>
         </div>
         <div class="fibre-stat">
-          <p class="fibre-stat-value">4000m</p>
-          <p class="fibre-stat-label">Grazing Altitude</p>
+          <p class="fibre-stat-value">4'000 m</p>
+          <p class="fibre-stat-label">Grazing altitude</p>
         </div>
         <div class="fibre-stat">
-          <p class="fibre-stat-value">3×</p>
-          <p class="fibre-stat-label">Warmer Than Wool</p>
+          <p class="fibre-stat-value">3 ×</p>
+          <p class="fibre-stat-label">Warmer than wool</p>
         </div>
       </div>
     </div>
