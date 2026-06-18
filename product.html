@@ -158,7 +158,7 @@
   transform: scale(1.15);
 }
 
-.color-swatch-large.active {
+.color-swatch-large.is-selected {
   border-color: var(--earth);
   transform: scale(1.1);
 }
@@ -191,7 +191,7 @@
   border-color: var(--terracotta);
 }
 
-.size-option.active {
+.size-option.is-selected {
   border-color: var(--earth);
   background-color: var(--earth);
   color: var(--warm-white);
@@ -521,8 +521,8 @@
       <div class="footer-newsletter">
         <h4 class="footer-heading">Newsletter</h4>
         <p>Softness, delivered. Be the first to know about new collections, artisan stories, and exclusive releases.</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing.');this.querySelector('input').value='';">
-          <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+        <form class="newsletter-form" action="https://formspree.io/f/xwpkqyra" method="POST">
+          <input type="email" name="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
           <button type="submit" class="newsletter-submit">Subscribe</button>
         </form>
       </div>
@@ -544,8 +544,8 @@
   <!-- Snipcart config -->
   <div id="snipcart" data-api-key="YOUR_SNIPCART_KEY" hidden></div>
 
-  <script src="/js/products-v8.js"></script>
-  <script src="/js/main-v6.js"></script>
+  <script src="/js/products-v9.js"></script>
+  <script src="/js/main-v7.js"></script>
 
   <script>
   // Parse URL parameter and render product detail page

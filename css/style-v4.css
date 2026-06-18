@@ -96,8 +96,7 @@ body {
   color: var(--warm-white);
 }
 
-/* ---------- 5. FONT FACE (Google Fonts Imports) ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap');
+/* ---------- 5. FONT FACE (loaded via HTML <link>) ---------- */
 
 /* ---------- 6. TYPOGRAPHY ---------- */
 h1, h2, h3, h4, h5, h6 {
@@ -915,7 +914,8 @@ p:last-child {
   color: var(--terracotta);
 }
 
-.size-selector .size-btn.is-selected {
+.size-selector .size-btn.is-selected,
+.size-option.is-selected {
   border-color: var(--terracotta);
   background-color: var(--terracotta);
   color: var(--cream);

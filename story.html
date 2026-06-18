@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Story — KORA Himalayan Cashmere · Handmade in Nepal | Three Generations of Artisans</title>
 <meta name="description" content="Discover the story behind KORA Cashmere. Three generations of Kathmandu artisans crafting luxury Himalayan cashmere by hand in Nepal.">
-<meta name="keywords" content="cashmere story, himalayan cashmere artisans, nepal cashmere, handmade cashmere, kathmandu valley weaving, ethical cashmere, artisan cashmere">
+<meta name="keywords" content="himalayan cashmere, cashmere artisans nepal, handmade cashmere process, ethical fashion nepal, sustainable cashmere, changthangi goat, kathmandu weaving, artisan story, cashmere heritage">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://koracashmere.com/story">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://images.unsplash.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style-v4.css">
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
@@ -216,6 +215,18 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.maker-portrait-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--terracotta);
+  background-color: var(--sand);
 }
 .maker-name {
   font-family: var(--font-heading);
@@ -497,7 +508,7 @@
     <div class="makers-grid">
       <div class="maker-card reveal reveal-d1">
         <div class="maker-portrait">
-          <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=300&q=80&fit=crop&auto=format" alt="Asha — Master Weaver" loading="lazy">
+          <div class="maker-portrait-placeholder">A</div>
         </div>
         <p class="maker-name">Asha</p>
         <p class="maker-title">Master Weaver</p>
@@ -506,7 +517,7 @@
       </div>
       <div class="maker-card reveal reveal-d2">
         <div class="maker-portrait">
-          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&q=80&fit=crop&auto=format" alt="Maya — Embroidery Artist" loading="lazy">
+          <div class="maker-portrait-placeholder">M</div>
         </div>
         <p class="maker-name">Maya</p>
         <p class="maker-title">Embroidery Artist</p>
@@ -515,7 +526,7 @@
       </div>
       <div class="maker-card reveal reveal-d3">
         <div class="maker-portrait">
-          <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=300&q=80&fit=crop&auto=format" alt="Durga — Quality Master" loading="lazy">
+          <div class="maker-portrait-placeholder">D</div>
         </div>
         <p class="maker-name">Durga</p>
         <p class="maker-title">Quality Master</p>
@@ -696,8 +707,8 @@
       <div class="footer-newsletter">
         <h4 class="footer-heading">Newsletter</h4>
         <p>Softness, delivered. Be the first to know about new collections, artisan stories, and exclusive releases.</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing.');this.querySelector('input').value='';">
-          <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+        <form class="newsletter-form" action="https://formspree.io/f/xwpkqyra" method="POST">
+          <input type="email" name="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
           <button type="submit" class="newsletter-submit">Subscribe</button>
         </form>
       </div>
@@ -718,8 +729,8 @@
        ═══════════════════════════════════════════════════════ -->
   <div id="snipcart" data-api-key="YOUR_SNIPCART_KEY" hidden></div>
 
-  <script src="/js/products-v8.js"></script>
-  <script src="/js/main-v6.js"></script>
+  <script src="/js/products-v9.js"></script>
+  <script src="/js/main-v7.js"></script>
 
 </body>
 </html>

@@ -36,16 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.querySelector('.mobile-overlay');
 
   const closeMenu = () => {
-    hamburger.classList.remove('open');
-    overlay.classList.remove('open');
+    hamburger.classList.remove('is-active');
+    overlay.classList.remove('is-open');
     overlay.style.opacity = '0';
     setTimeout(() => { overlay.style.display = 'none'; }, 400);
     document.body.style.overflow = '';
   };
 
   const openMenu = () => {
-    hamburger.classList.add('open');
-    overlay.classList.add('open');
+    hamburger.classList.add('is-active');
+    overlay.classList.add('is-open');
     overlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
     requestAnimationFrame(() => {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (hamburger && overlay) {
     hamburger.addEventListener('click', () => {
-      const isOpen = hamburger.classList.contains('open');
+      const isOpen = hamburger.classList.contains('is-active');
       isOpen ? closeMenu() : openMenu();
     });
 
@@ -118,13 +118,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initProductZoom();
 
   // ─────────────────────────────────────────────────────────────
-  // 5. SIZE SELECTOR (für product.html)
+  // 5. SIZE SELECTOR (für product.html — .size-option und shop.html — .size-btn)
   // ─────────────────────────────────────────────────────────────
   document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.size-btn');
+    const btn = e.target.closest('.size-btn') || e.target.closest('.size-option');
     if (!btn) return;
-    btn.closest('.size-options')?.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
+    const parent = btn.closest('.size-options') || btn.closest('.product-size-options');
+    parent?.querySelectorAll('.size-btn, .size-option').forEach(b => b.classList.remove('is-selected'));
+    btn.classList.add('is-selected');
   });
 
   // ─────────────────────────────────────────────────────────────

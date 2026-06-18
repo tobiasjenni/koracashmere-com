@@ -160,8 +160,8 @@
       <div class="footer-newsletter">
         <h4 class="footer-heading">Newsletter</h4>
         <p>Softness, delivered. Be the first to know about new collections, artisan stories, and exclusive releases.</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing.');this.querySelector('input').value='';">
-          <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+        <form class="newsletter-form" action="https://formspree.io/f/xwpkqyra" method="POST">
+          <input type="email" name="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
           <button type="submit" class="newsletter-submit">Subscribe</button>
         </form>
       </div>
@@ -182,8 +182,8 @@
        ═══════════════════════════════════════════════════════ -->
   <div id="snipcart" data-api-key="YOUR_SNIPCART_KEY" hidden></div>
 
-  <script src="/js/products-v8.js"></script>
-  <script src="/js/main-v6.js"></script>
+  <script src="/js/products-v9.js"></script>
+  <script src="/js/main-v7.js"></script>
 
 </body>
 </html>
