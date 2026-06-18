@@ -3,61 +3,566 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Product — KORA Cashmere</title>
-<meta name="robots" content="index, follow">
+<title>Product — KORA Cashmere | Himalayan Cashmere · Handmade in Nepal</title>
+<meta name="description" content="Luxury cashmere, handcrafted in the Nepalese Himalayas. Eternal softness from the world's finest fibers.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://koracashmere.com/product">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://images.unsplash.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style-v4.css">
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+<!-- Open Graph -->
+<meta property="og:title" content="KORA Cashmere — Product">
+<meta property="og:description" content="Luxury Himalayan cashmere, handcrafted in Nepal.">
+<meta property="og:url" content="https://koracashmere.com/product">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KORA Cashmere">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Snipcart -->
+<script async src="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.js"></script>
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.css">
+
+<style>
+/* ─── Product Detail Page Styles ─── */
+
+.product-page {
+  padding: 140px 24px 80px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Image Section */
+.product-detail-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: var(--sand);
+  overflow: hidden;
+  border-radius: 4px;
+  position: relative;
+}
+
+.product-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-detail-image:hover img {
+  transform: scale(1.05);
+}
+
+.product-thumbnails {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.product-thumbnail {
+  width: 72px;
+  height: 96px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color var(--transition-base);
+  background-color: var(--sand);
+}
+
+.product-thumbnail.active {
+  border-color: var(--terracotta);
+}
+
+.product-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info Section */
+.product-detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 8px;
+}
+
+.product-detail-name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.15;
+  color: var(--earth);
+  margin: 0;
+}
+
+.product-detail-price {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--earth);
+}
+
+.product-detail-description {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--stone);
+}
+
+/* Section dividers */
+.product-detail-section {
+  padding-top: 8px;
+  border-top: 1px solid var(--sand);
+}
+
+.product-detail-section label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--stone);
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Color Swatches */
+.product-color-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.color-swatch-large {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color var(--transition-base), transform var(--transition-base);
+  position: relative;
+}
+
+.color-swatch-large:hover {
+  transform: scale(1.15);
+}
+
+.color-swatch-large.active {
+  border-color: var(--earth);
+  transform: scale(1.1);
+}
+
+/* Size Options */
+.product-size-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.size-option {
+  min-width: 48px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border: 1px solid var(--sand);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--earth);
+  cursor: pointer;
+  transition: border-color var(--transition-base), background-color var(--transition-base);
+}
+
+.size-option:hover {
+  border-color: var(--terracotta);
+}
+
+.size-option.active {
+  border-color: var(--earth);
+  background-color: var(--earth);
+  color: var(--warm-white);
+}
+
+/* Product Specs */
+.product-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.spec-label {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--stone);
+  letter-spacing: 0.5px;
+}
+
+.spec-value {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--earth);
+  text-align: right;
+}
+
+/* Add to Bag Button */
+.product-add-to-bag {
+  width: 100%;
+  padding: 16px 32px;
+  background-color: var(--earth);
+  color: var(--warm-white);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.product-add-to-bag:hover {
+  background-color: var(--terracotta);
+}
+
+/* Meet the Maker */
+.meet-the-maker {
+  padding-top: 8px;
+  border-top: 1px solid var(--sand);
+}
+
+.maker-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background-color: var(--cream);
+  border-radius: 8px;
+}
+
+.maker-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  background-color: var(--sand);
+}
+
+.maker-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.maker-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--terracotta);
+  background-color: var(--sand);
+}
+
+.maker-details {
+  flex: 1;
+}
+
+.maker-name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--earth);
+  margin-bottom: 6px;
+}
+
+.maker-quote {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--stone);
+  margin: 0;
+}
+
+/* Complete the Look */
+.complete-look {
+  margin-top: 80px;
+  padding-top: 48px;
+  border-top: 1px solid var(--sand);
+}
+
+.complete-look h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 28px;
+  color: var(--earth);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.complete-look-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.complete-look-item {
+  text-align: center;
+}
+
+.complete-look-item img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+  background-color: var(--sand);
+  margin-bottom: 12px;
+}
+
+.complete-look-item h4 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--earth);
+  margin-bottom: 4px;
+}
+
+.complete-look-item .price {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--stone);
+}
+
+/* Product not found */
+.product-not-found {
+  text-align: center;
+  padding: 120px 24px;
+}
+
+.product-not-found h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 36px;
+  color: var(--earth);
+  margin-bottom: 12px;
+}
+
+.product-not-found p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--stone);
+}
+
+/* Loading state */
+.product-detail-loading {
+  text-align: center;
+  padding: 120px 24px;
+  color: var(--stone);
+}
+
+.product-detail-loading .spinner {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--sand);
+  border-top-color: var(--terracotta);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-page {
+    padding: 120px 16px 60px;
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .product-detail-name {
+    font-size: 28px;
+  }
+
+  .product-detail-price {
+    font-size: 24px;
+  }
+
+  .product-thumbnails {
+    flex-wrap: wrap;
+  }
+
+  .complete-look-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .maker-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-detail {
+    gap: 40px;
+  }
+
+  .complete-look-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
 </head>
 <body>
 
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="/" class="logo">KORA</a>
-    <nav class="nav-links">
-      <a href="/shop">Shop</a>
-      <a href="/story">Our Story</a>
-      <a href="/wholesale">Wholesale</a>
-      <button class="cart-btn snipcart-checkout" aria-label="Cart">
-        <span class="cart-label">Bag</span>
-        <span class="snipcart-items-count cart-count">0</span>
+  <!-- ═══════════════════════════════════════════════════════
+       NAV (fixed)
+       ═══════════════════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <a href="/" class="nav-logo">KORA</a>
+    <div class="nav-links">
+      <a href="/shop" class="nav-link">Shop</a>
+      <a href="/story" class="nav-link">Our Story</a>
+      <a href="/wholesale" class="nav-link">Wholesale</a>
+      <button class="nav-cart snipcart-checkout" aria-label="Shopping cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="snipcart-items-count">0</span>
       </button>
-    </nav>
-    <button class="hamburger" aria-label="Menu">
+    </div>
+    <button class="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay">
+    <a href="/shop" class="nav-link">Shop</a>
+    <a href="/story" class="nav-link">Our Story</a>
+    <a href="/wholesale" class="nav-link">Wholesale</a>
   </div>
-</header>
 
-<div class="mobile-overlay">
-  <a href="/shop">Shop</a>
-  <a href="/story">Our Story</a>
-  <a href="/wholesale">Wholesale</a>
-</div>
-
-<main>
-  <section class="product-page">
-    <div id="product-detail">
-      <div class="product-detail">
-        <div class="product-detail-image">
-          <span style="font-size:72px;opacity:0.15;">&#x1F9F6;</span>
-        </div>
-        <div class="product-detail-info">
-          <p style="color:var(--stone);font-size:14px;padding-top:40px;">Loading product…</p>
+  <main>
+    <section class="product-page">
+      <div id="product-detail">
+        <div class="product-detail-loading">
+          <div class="spinner"></div>
+          <p>Loading product…</p>
         </div>
       </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER (earth-deep)
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">KORA</div>
+        <p class="footer-description">Himalayan Cashmere, handcrafted in Nepal. Three generations of artisan tradition, woven into every thread.</p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h4 class="footer-heading">Navigate</h4>
+        <div class="footer-links">
+          <a href="/shop" class="footer-link">Shop</a>
+          <a href="/story" class="footer-link">Our Story</a>
+          <a href="/wholesale" class="footer-link">Wholesale</a>
+          <a href="mailto:hello@koracashmere.com" class="footer-link">Contact</a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h4 class="footer-heading">Newsletter</h4>
+        <p>Softness, delivered. Be the first to know about new collections, artisan stories, and exclusive releases.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing.');this.querySelector('input').value='';">
+          <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+          <button type="submit" class="newsletter-submit">Subscribe</button>
+        </form>
+      </div>
     </div>
-  </section>
-</main>
 
-<footer class="footer">
-  <div class="footer-bottom"><span>&copy; 2026 KORA. All rights reserved.</span></div>
-</footer>
+    <div class="footer-bottom">
+      <span class="footer-bottom-text">&copy; 2026 KORA Cashmere. All rights reserved.</span>
+      <span class="footer-bottom-text">
+        <a href="/privacy/" class="footer-link" style="opacity:0.7;font-size:12px;">Privacy Policy</a>
+        <span style="opacity:0.3;margin:0 8px;">·</span>
+        <a href="/terms/" class="footer-link" style="opacity:0.7;font-size:12px;">Terms of Service</a>
+      </span>
+    </div>
+  </footer>
 
-<script src="/js/products.js"></script>
-<script src="/js/interactions.js"></script>
-<script src="/js/main.js"></script>
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <!-- Snipcart config -->
+  <div id="snipcart" data-api-key="YOUR_SNIPCART_KEY" hidden></div>
+
+  <script src="/js/products.js"></script>
+  <script src="/js/main.js"></script>
+
+  <script>
+  // Parse URL parameter and render product detail page
+  document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('p');
+
+    if (!slug) {
+      document.getElementById('product-detail').innerHTML =
+        '<div class="product-not-found"><h2>No product specified</h2><p>Please select a product from <a href="/shop" style="text-decoration:underline;color:var(--terracotta);">the collection</a>.</p></div>';
+      return;
+    }
+
+    if (typeof renderProductPage === 'function') {
+      document.getElementById('product-detail').innerHTML = renderProductPage(slug);
+    }
+  });
+  </script>
 </body>
 </html>

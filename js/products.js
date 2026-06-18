@@ -1,80 +1,269 @@
 // KORA Cashmere — Product Catalog
+// Himalayan Earth Color Palette
+const COLORS = {
+  cream:   { name: 'Cream',     hex: '#F5F0E8' },
+  walnut:  { name: 'Walnut',    hex: '#5C4033' },
+  terracotta: { name: 'Terracotta', hex: '#C8653E' },
+  saffron: { name: 'Saffron',   hex: '#E8B84B' },
+  charcoal:{ name: 'Charcoal',  hex: '#36454F' },
+  navy:    { name: 'Navy',      hex: '#1B2A4A' }
+};
+
 const PRODUCTS = [
   {
-    id: 'vneck-sweater',
+    id: 1,
     name: 'Cashmere V-Neck Sweater',
-    category: 'Sweaters',
-    price: 380.00,
-    description: 'The essential. A V-neck cashmere pullover in natural, undyed oat. Relaxed fit — worn alone over skin or layered over a shirt. This is the piece you reach for every morning, every season, every year.',
-    details: ['100% Himalayan Cashmere', 'V-neck, relaxed fit', 'Naturally undyed oat', 'Ribbed cuffs & hem', 'Hand-spun in Kathmandu', '350g'],
+    price: 380,
+    category: 'sweaters',
     slug: 'vneck-sweater',
-    img: 'https://images.unsplash.com/photo-1631541909061-71e349d1f203?w=600&q=85&fit=crop'
+    description: 'The quintessential V-neck, draping softly at the collarbone. Woven from the finest Himalayan fibres for effortless elegance.',
+    colors: [
+      COLORS.cream,
+      COLORS.walnut,
+      COLORS.terracotta,
+      COLORS.charcoal
+    ],
+    images: [
+      '/img/models/model-vneck-female.jpg',
+      '/img/products/vneck-sweater.jpg'
+    ],
+    material: '100% Himalayan Cashmere',
+    weight: '230gsm',
+    origin: 'Handcrafted in the Kathmandu Valley, Nepal',
+    makerName: 'Asha',
+    makerQuote: 'Every loop I knit carries the warmth of my grandmother\'s hands guiding mine beneath the Himalayan sun.'
   },
   {
-    id: 'crewneck-sweater',
+    id: 2,
     name: 'Cashmere Crewneck Sweater',
-    category: 'Sweaters',
-    price: 380.00,
-    description: 'The classic crewneck. Clean lines. No distractions. All the warmth of Himalayan cashmere in a timeless silhouette. Mineral-dyed charcoal.',
-    details: ['100% Himalayan Cashmere', 'Crew neck, tailored fit', 'Mineral-dyed charcoal', 'Ribbed cuffs & hem', 'Hand-spun in Kathmandu', '350g'],
+    price: 380,
+    category: 'sweaters',
     slug: 'crewneck-sweater',
-    img: 'https://plus.unsplash.com/premium_photo-1671460921793-e5e99d795819?w=600&q=85&fit=crop'
+    description: 'Pure comfort in its most honest form. A crewneck that hugs gently and endures seasons, dyed with earth\'s own pigments.',
+    colors: [
+      COLORS.cream,
+      COLORS.saffron,
+      COLORS.navy,
+      COLORS.charcoal
+    ],
+    images: [
+      '/img/models/model-crewneck-male.jpg',
+      '/img/products/crewneck-sweater.jpg'
+    ],
+    material: '100% Himalayan Cashmere',
+    weight: '230gsm',
+    origin: 'Handcrafted in the Kathmandu Valley, Nepal',
+    makerName: 'Asha',
+    makerQuote: 'To knit cashmere is to listen — the fibres tell you when the tension is true, when the soul is in the stitch.'
   },
   {
-    id: 'turtleneck-sweater',
+    id: 3,
     name: 'Cashmere Turtleneck Sweater',
-    category: 'Sweaters',
-    price: 420.00,
-    description: 'Full turtleneck. The warmest piece in the collection. Double-layer knit at the neck — soft enough for bare skin, structured enough to hold its shape all day. Natural cream, undyed.',
-    details: ['100% Himalayan Cashmere', 'Turtleneck, relaxed fit', 'Naturally undyed cream', 'Double-layer neck knit', 'Hand-spun in Kathmandu', '400g'],
+    price: 420,
+    category: 'sweaters',
     slug: 'turtleneck-sweater',
-    img: 'https://images.unsplash.com/photo-1601379327928-bedfaf9da2d0?w=600&q=85&fit=crop'
+    description: 'A cocoon of warmth. The double-layer turtleneck frames the face like a sculpture, soft as a mountain breeze.',
+    colors: [
+      COLORS.cream,
+      COLORS.terracotta,
+      COLORS.charcoal,
+      COLORS.navy
+    ],
+    images: [
+      '/img/models/model-turtleneck-female.jpg',
+      '/img/products/turtleneck-sweater.jpg'
+    ],
+    material: '100% Himalayan Cashmere',
+    weight: '230gsm',
+    origin: 'Handcrafted in the Kathmandu Valley, Nepal',
+    makerName: 'Asha',
+    makerQuote: 'A turtleneck demands patience — each row must rise evenly, like the terraced hills of my homeland.'
   },
   {
-    id: 'classic-scarf',
+    id: 4,
     name: 'Cashmere Scarf',
-    category: 'Accessories',
-    price: 120.00,
-    description: 'Our signature piece. Pure Himalayan cashmere in its natural, undyed state. Hand-rolled edges. 180cm × 30cm.',
-    details: ['100% Himalayan Cashmere', 'Hand-spun & hand-woven', '180cm × 30cm', 'Undyed natural fibre', 'Hand-rolled edges', '200g'],
+    price: 120,
+    category: 'accessories',
     slug: 'classic-scarf',
-    img: 'https://plus.unsplash.com/premium_photo-1695603438043-1b9ab6ebe1a8?w=600&q=85&fit=crop'
+    description: 'Draped softly around the shoulders or tied with intention. An heirloom-weight scarf touched by Himalayan hands.',
+    colors: [
+      COLORS.cream,
+      COLORS.walnut,
+      COLORS.terracotta,
+      COLORS.saffron,
+      COLORS.navy
+    ],
+    images: [
+      '/img/models/model-scarf-female.jpg',
+      '/img/products/classic-scarf.jpg'
+    ],
+    material: '100% Himalayan Cashmere',
+    weight: '180gsm',
+    origin: 'Handcrafted in the Kathmandu Valley, Nepal',
+    makerName: 'Durga',
+    makerQuote: 'The loom sings when the yarn is happy. A scarf woven with joy wraps its wearer in that same song.'
   },
   {
-    id: 'cashmere-gloves',
+    id: 5,
     name: 'Cashmere Gloves',
-    category: 'Accessories',
-    price: 85.00,
-    description: 'Full cashmere gloves with touchscreen-compatible fingertips. Indigo-dyed with Himalayan mineral pigments.',
-    details: ['100% Himalayan Cashmere', 'Touchscreen fingertips', 'Indigo mineral-dyed', 'Ribbed cuff', 'One size', '70g'],
+    price: 85,
+    category: 'accessories',
     slug: 'cashmere-gloves',
-    img: 'https://images.unsplash.com/photo-1611690889004-c009a7e03712?w=600&q=85&fit=crop'
+    description: 'Touch the world softly. Touchscreen-ready fingertips meet Himalayan warmth in a glove that honours craft and connection.',
+    colors: [
+      COLORS.walnut,
+      COLORS.charcoal,
+      COLORS.navy,
+      COLORS.terracotta
+    ],
+    images: [
+      '/img/models/model-gloves-male.jpg',
+      '/img/products/cashmere-gloves.jpg'
+    ],
+    material: '100% Himalayan Cashmere',
+    weight: '160gsm',
+    origin: 'Handcrafted in the Kathmandu Valley, Nepal',
+    makerName: 'Maya',
+    makerQuote: 'My fingers dance across the needles each morning, weaving warmth for hands that may be far from home.'
   },
   {
-    id: 'cashmere-socks',
+    id: 6,
     name: 'Cashmere Socks',
-    category: 'Accessories',
-    price: 75.00,
-    description: 'Three pairs: Natural, Indigo, Charcoal. The most requested item from our artisan families for themselves.',
-    details: ['100% Himalayan Cashmere', '3 pairs: Natural, Indigo, Charcoal', 'Ribbed ankle', 'One size (EU 39–44)', '90g total'],
+    price: 75,
+    category: 'accessories',
     slug: 'cashmere-socks',
-    img: 'https://images.unsplash.com/photo-1615486364462-ef6363adbc18?w=600&q=85&fit=crop'
+    description: 'Step into a secret luxury. Pure cashmere against the skin from heel to toe, hand-finished with care in every thread.',
+    colors: [
+      COLORS.cream,
+      COLORS.charcoal,
+      COLORS.navy,
+      COLORS.saffron
+    ],
+    images: [
+      '/img/models/model-socks-cozy.jpg',
+      '/img/products/cashmere-socks.jpg'
+    ],
+    material: '100% Himalayan Cashmere',
+    weight: '150gsm',
+    origin: 'Handcrafted in the Kathmandu Valley, Nepal',
+    makerName: 'Durga',
+    makerQuote: 'Even the smallest garment deserves the greatest care. A sock is a beginning, not an end.'
   }
 ];
 
-function renderProductCard(product, linkToProduct) {
-  const link = linkToProduct ? `href="/product?p=${product.slug}"` : '';
-  const tag = linkToProduct ? 'a' : 'div';
-  return `
-    <${tag} class="product-card" ${link} data-category="${product.category.toLowerCase()}">
-      <div class="product-card-image">
-        <img src="${product.img}" alt="${product.name}" loading="lazy"
-             onerror="var p=this.nextElementSibling;this.style.display='none';if(p)p.style.display='flex'">
-        <div class="placeholder-img">${product.category}</div>
+/**
+ * renderShopGrid(filter)
+ * @param {string} filter - 'all', 'sweaters', or 'accessories'
+ * @returns {string} HTML string of product cards
+ */
+function renderShopGrid(filter) {
+  const filtered = filter === 'all'
+    ? PRODUCTS
+    : PRODUCTS.filter(p => p.category === filter);
+
+  return filtered.map(product => {
+    const swatches = product.colors.map(c =>
+      `<div class="color-swatch" style="background-color:${c.hex}" title="${c.name}"></div>`
+    ).join('');
+
+    return `
+      <div class="product-card" data-category="${product.category}" data-slug="${product.slug}">
+        <div class="product-card-image">
+          <img src="${product.images[0]}" alt="${product.name}" loading="lazy">
+        </div>
+        <div class="product-card-info">
+          <h3 class="product-card-name" style="font-family:'Cormorant Garamond',serif">${product.name}</h3>
+          <div class="product-card-price">€${product.price}</div>
+          <div class="product-card-swatches">${swatches}</div>
+          <button class="snipcart-add-item"
+            data-item-id="${product.slug}"
+            data-item-name="${product.name}"
+            data-item-price="${product.price}"
+            data-item-url="/product?p=${product.slug}"
+            data-item-image="${product.images[0]}"
+            data-item-description="${product.description}">
+            Add to Bag
+          </button>
+        </div>
       </div>
-      <div class="product-card-category">${product.category}</div>
-      <div class="product-card-name">${product.name}</div>
-      <div class="product-card-price">€${product.price.toFixed(0)}</div>
-    </${tag}>
+    `;
+  }).join('\n');
+}
+
+/**
+ * renderProductPage(slug)
+ * @param {string} slug - product slug identifier
+ * @returns {string} HTML string of the full product detail page
+ */
+function renderProductPage(slug) {
+  const product = PRODUCTS.find(p => p.slug === slug);
+  if (!product) {
+    return '<div class="product-not-found"><h2>Product not found</h2><p>The item you are looking for does not exist.</p></div>';
+  }
+
+  const swatches = product.colors.map(c =>
+    `<div class="color-swatch-large" style="background-color:${c.hex}" title="${c.name}" data-color="${c.name}"></div>`
+  ).join('');
+
+  const sizes = ['S', 'M', 'L', 'XL'].map(s =>
+    `<div class="size-option" data-size="${s}">${s}</div>`
+  ).join('');
+
+  // Image gallery: model shot (primary) + product shots
+  const galleryImages = product.images.map((img, i) =>
+    `<img src="${img}" alt="${product.name}${i === 0 ? ' — Model' : ' — Detail'}" class="${i === 0 ? 'gallery-main' : 'gallery-thumb'}" loading="${i === 0 ? 'eager' : 'lazy'}">`
+  ).join('\n');
+
+  return `
+    <div class="product-detail">
+      <div class="product-detail-image">
+        ${galleryImages}
+      </div>
+      <div class="product-detail-info">
+        <h1 class="product-detail-name" style="font-family:'Cormorant Garamond',serif">${product.name}</h1>
+        <div class="product-detail-price">€${product.price}</div>
+        <p class="product-detail-description">${product.description}</p>
+
+        <div class="product-detail-section">
+          <label>Color</label>
+          <div class="product-color-options">${swatches}</div>
+        </div>
+
+        <div class="product-detail-section">
+          <label>Size</label>
+          <div class="product-size-options">${sizes}</div>
+        </div>
+
+        <div class="product-detail-section product-specs">
+          <div class="spec-row"><span class="spec-label">Material</span><span class="spec-value">${product.material}</span></div>
+          <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">${product.weight}</span></div>
+          <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-value">${product.origin}</span></div>
+        </div>
+
+        <button class="snipcart-add-item product-add-to-bag"
+          data-item-id="${product.slug}"
+          data-item-name="${product.name}"
+          data-item-price="${product.price}"
+          data-item-url="/product?p=${product.slug}"
+          data-item-image="${product.images[0]}"
+          data-item-description="${product.description}">
+          Add to Bag — €${product.price}
+        </button>
+
+        <div class="meet-the-maker">
+          <div class="maker-card">
+            <div class="maker-details">
+              <h4 class="maker-name">Meet ${product.makerName}</h4>
+              <p class="maker-quote">"${product.makerQuote}"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   `;
 }
+
+// Export to window for global access
+window.PRODUCTS = PRODUCTS;
+window.renderShopGrid = renderShopGrid;
+window.renderProductPage = renderProductPage;

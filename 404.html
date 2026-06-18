@@ -3,29 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page Not Found — KORA Cashmere</title>
-<link rel="stylesheet" href="/css/style.css">
+<title>Page Not Found — KORA Cashmere | Himalayan Cashmere</title>
+<meta name="description" content="404 — The page you're looking for has wandered off into the mountains. Return to KORA Cashmere.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://koracashmere.com/404">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style-v4.css">
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Page Not Found — KORA Cashmere">
+<meta property="og:description" content="The page you're looking for has wandered off into the mountains.">
+<meta property="og:url" content="https://koracashmere.com/404">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KORA Cashmere">
+
+<style>
+/* ─── 404 Page v4 Styles ─── */
+
+.error-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 160px 24px 100px;
+  background-color: var(--cream);
+}
+
+.error-code {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(5rem, 12vw, 12rem);
+  color: var(--earth);
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: 4px;
+}
+
+.error-heading {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--saffron);
+  margin-bottom: 16px;
+}
+
+.error-message {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--stone);
+  max-width: 420px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.error-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.error-actions .btn {
+  min-width: 180px;
+}
+
+@media (max-width: 768px) {
+  .error-section {
+    padding: 140px 20px 80px;
+    min-height: 70vh;
+  }
+
+  .error-actions .btn {
+    min-width: 140px;
+  }
+}
+</style>
 </head>
 <body>
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="/" class="logo">KORA</a>
-    <nav class="nav-links">
-      <a href="/shop">Shop</a>
-      <a href="/story">Our Story</a>
-      <a href="/wholesale">Wholesale</a>
-    </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAV (fixed)
+       ═══════════════════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <a href="/" class="nav-logo">KORA</a>
+    <div class="nav-links">
+      <a href="/shop" class="nav-link">Shop</a>
+      <a href="/story" class="nav-link">Our Story</a>
+      <a href="/wholesale" class="nav-link">Wholesale</a>
+      <button class="nav-cart snipcart-checkout" aria-label="Shopping cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="snipcart-items-count">0</span>
+      </button>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay">
+    <a href="/shop" class="nav-link">Shop</a>
+    <a href="/story" class="nav-link">Our Story</a>
+    <a href="/wholesale" class="nav-link">Wholesale</a>
   </div>
-</header>
-<main>
-  <div class="error-page">
-    <h1>404</h1>
-    <p>This page has drifted off like Himalayan mist.</p>
-    <a href="/" class="btn btn-outline">Return Home</a>
-  </div>
-</main>
-<script src="/js/interactions.js"></script>
-<script src="/js/main.js"></script>
+
+  <main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       404 ERROR SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="error-section">
+    <p class="error-code">404</p>
+    <p class="error-heading">Page Not Found</p>
+    <p class="error-message">The page you're looking for has wandered off into the mountains.</p>
+    <div class="error-actions">
+      <a href="/shop" class="btn btn-primary">Browse the Collection</a>
+      <a href="/" class="btn btn-secondary">Return Home</a>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER (earth-deep)
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">KORA</div>
+        <p class="footer-description">Himalayan Cashmere, handcrafted in Nepal. Three generations of artisan tradition, woven into every thread.</p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h4 class="footer-heading">Navigate</h4>
+        <div class="footer-links">
+          <a href="/shop" class="footer-link">Shop</a>
+          <a href="/story" class="footer-link">Our Story</a>
+          <a href="/wholesale" class="footer-link">Wholesale</a>
+          <a href="mailto:hello@koracashmere.com" class="footer-link">Contact</a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h4 class="footer-heading">Newsletter</h4>
+        <p>Softness, delivered. Be the first to know about new collections, artisan stories, and exclusive releases.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing.');this.querySelector('input').value='';">
+          <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+          <button type="submit" class="newsletter-submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-bottom-text">&copy; 2026 KORA Cashmere. All rights reserved.</span>
+      <span class="footer-bottom-text">
+        <a href="/privacy/" class="footer-link" style="opacity:0.7;font-size:12px;">Privacy Policy</a>
+        <span style="opacity:0.3;margin:0 8px;">·</span>
+        <a href="/terms/" class="footer-link" style="opacity:0.7;font-size:12px;">Terms of Service</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <div id="snipcart" data-api-key="YOUR_SNIPCART_KEY" hidden></div>
+
+  <script src="/js/products.js"></script>
+  <script src="/js/main.js"></script>
+
 </body>
 </html>

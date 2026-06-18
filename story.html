@@ -3,100 +3,723 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Story — KORA | Three Generations of Himalayan Cashmere Craftsmanship</title>
-<meta name="description" content="The story of KORA Himalayan cashmere — from Changthangi goats at 4,000 meters to three generations of artisans in the Kathmandu Valley. Hand-spun, hand-woven, handcrafted.">
-<meta name="keywords" content="cashmere story, himalayan cashmere craftsmanship, nepal weaving, artisan cashmere, changthangi goat, hand-spun cashmere">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<title>Our Story — KORA Himalayan Cashmere · Handmade in Nepal | Three Generations of Artisans</title>
+<meta name="description" content="Discover the story behind KORA Cashmere. Three generations of Kathmandu artisans crafting luxury Himalayan cashmere by hand in Nepal.">
+<meta name="keywords" content="cashmere story, himalayan cashmere artisans, nepal cashmere, handmade cashmere, kathmandu valley weaving, ethical cashmere, artisan cashmere">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://koracashmere.com/story">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://images.unsplash.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style-v4.css">
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
-<meta property="og:title" content="Our Story — KORA Cashmere">
-<meta property="og:description" content="Three generations of Himalayan cashmere craftsmanship. Hand-spun, hand-woven in Nepal.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Our Story — KORA Himalayan Cashmere · Handmade in Nepal">
+<meta property="og:description" content="Three generations of Kathmandu artisans. Discover the heritage behind every piece of KORA cashmere.">
 <meta property="og:url" content="https://koracashmere.com/story">
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KORA Cashmere">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Story — KORA Himalayan Cashmere">
+<meta name="twitter:description" content="Three generations of Kathmandu artisans crafting luxury Himalayan cashmere by hand.">
+
+<!-- Snipcart -->
+<script async src="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.js"></script>
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.css">
+
+<!-- Schema.org BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://koracashmere.com/#organization",
+  "name": "KORA Cashmere",
+  "alternateName": ["KORA Himalayan Cashmere", "KORA Nepal"],
+  "url": "https://koracashmere.com",
+  "email": "hello@koracashmere.com",
+  "description": "Luxury Himalayan cashmere, handcrafted by three generations of artisans in the Kathmandu Valley.",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Kathmandu Valley, Nepal"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "NP"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://koracashmere.com/#website",
+  "url": "https://koracashmere.com",
+  "name": "KORA Cashmere",
+  "description": "Luxury Himalayan cashmere, handcrafted in Nepal",
+  "inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://koracashmere.com/"},
+    {"@type":"ListItem","position":2,"name":"Our Story","item":"https://koracashmere.com/story"}
+  ]
+}
+</script>
+
+<style>
+/* ─── Story page specific styles ─── */
+
+/* Story Hero (half height) */
+.story-hero {
+  padding: 160px 24px 80px;
+  background-color: var(--earth-deep);
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.story-hero-content {
+  max-width: 680px;
+}
+.story-hero-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(42px, 7vw, 72px);
+  line-height: 1.1;
+  color: var(--cream);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.story-hero-subtitle {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--stone-light);
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Origin Section */
+.origin-section {
+  padding: 100px 24px;
+  background-color: var(--cream);
+}
+.origin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+.origin-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.origin-text .eyebrow {
+  color: var(--terracotta);
+}
+.origin-text h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.15;
+  color: var(--earth);
+}
+.origin-text p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--stone);
+}
+.origin-image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: var(--sand);
+}
+.origin-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.origin-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Makers Section */
+.makers-section {
+  padding: 100px 24px;
+  background-color: var(--sand);
+  text-align: center;
+}
+.makers-header {
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+.makers-header .eyebrow {
+  color: var(--terracotta);
+}
+.makers-header h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.15;
+  color: var(--earth);
+  margin-bottom: 12px;
+}
+.makers-header p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--stone);
+  line-height: 1.7;
+}
+.makers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+.maker-card {
+  background-color: var(--warm-white);
+  border-radius: 8px;
+  padding: 48px 32px 40px;
+  border: 1px solid rgba(232, 217, 200, 0.4);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+.maker-card:hover {
+  box-shadow: 0 12px 32px rgba(20, 17, 14, 0.06);
+  transform: translateY(-4px);
+}
+.maker-portrait {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  background-color: var(--sand);
+  border: 3px solid var(--cream);
+}
+.maker-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.maker-name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--earth);
+  margin-bottom: 4px;
+}
+.maker-title {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 4px;
+}
+.maker-experience {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--stone);
+  margin-bottom: 20px;
+}
+.maker-quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--stone);
+  position: relative;
+  padding-top: 16px;
+}
+.maker-quote::before {
+  content: '\201C';
+  font-family: var(--font-heading);
+  font-size: 40px;
+  color: var(--terracotta);
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+  opacity: 0.4;
+}
+
+/* Craft Section */
+.craft-section {
+  padding: 100px 24px;
+  background-color: var(--earth-deep);
+  color: var(--cream);
+  text-align: center;
+}
+.craft-header {
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+.craft-header .eyebrow {
+  color: var(--saffron);
+}
+.craft-header h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.15;
+  color: var(--cream);
+  margin-bottom: 12px;
+}
+.craft-header p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--stone-light);
+  line-height: 1.7;
+}
+.craft-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+.craft-step {
+  padding: 40px 24px;
+  border: 1px solid rgba(247, 242, 234, 0.08);
+  border-radius: 8px;
+  background-color: rgba(28, 24, 20, 0.4);
+  transition: background-color var(--transition-base), transform var(--transition-base);
+}
+.craft-step:hover {
+  background-color: rgba(28, 24, 20, 0.7);
+  transform: translateY(-4px);
+}
+.craft-step-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+  color: var(--saffron);
+}
+.craft-step-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.craft-step h3 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+.craft-step p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--stone-light);
+  line-height: 1.7;
+}
+.craft-step-number {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--saffron);
+  opacity: 0.6;
+  margin-bottom: 12px;
+}
+
+/* Values Section (story page version - 4 columns) */
+.values-story-section {
+  padding: 100px 24px;
+  background-color: var(--cream);
+}
+.values-story-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .story-hero {
+    padding: 120px 16px 60px;
+    min-height: 40vh;
+  }
+  .origin-section {
+    padding: 64px 16px;
+  }
+  .origin-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .origin-image {
+    aspect-ratio: 16 / 10;
+    order: -1;
+  }
+  .makers-section {
+    padding: 64px 16px;
+  }
+  .makers-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .makers-header {
+    margin-bottom: 40px;
+  }
+  .maker-card {
+    padding: 36px 24px 32px;
+  }
+  .craft-section {
+    padding: 64px 16px;
+  }
+  .craft-steps {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .craft-header {
+    margin-bottom: 40px;
+  }
+  .values-story-section {
+    padding: 64px 16px;
+  }
+  .values-story-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .values-story-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .craft-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .makers-grid {
+    gap: 20px;
+  }
+  .origin-grid {
+    gap: 40px;
+  }
+}
+</style>
 </head>
 <body>
 
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="/" class="logo">KORA</a>
-    <nav class="nav-links">
-      <a href="/shop">Shop</a>
-      <a href="/story">Our Story</a>
-      <a href="/wholesale">Wholesale</a>
-      <button class="cart-btn snipcart-checkout" aria-label="Cart">
-        <span class="cart-label">Bag</span>
-        <span class="snipcart-items-count cart-count">0</span>
+  <!-- ═══════════════════════════════════════════════════════
+       NAV (fixed)
+       ═══════════════════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <a href="/" class="nav-logo">KORA</a>
+    <div class="nav-links">
+      <a href="/shop" class="nav-link">Shop</a>
+      <a href="/story" class="nav-link">Our Story</a>
+      <a href="/wholesale" class="nav-link">Wholesale</a>
+      <button class="nav-cart snipcart-checkout" aria-label="Shopping cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="snipcart-items-count">0</span>
       </button>
-    </nav>
-    <button class="hamburger" aria-label="Menu">
+    </div>
+    <button class="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
-  </div>
-</header>
+  </header>
 
-<div class="mobile-overlay">
-  <a href="/shop">Shop</a>
-  <a href="/story">Our Story</a>
-  <a href="/wholesale">Wholesale</a>
-</div>
-
-<main>
-  <div class="page-header reveal">
-    <p class="section-label">Our Story</p>
-    <h1>From the Himalayas<br>to Your Hands</h1>
-    <p>The circle of Kora — a story of altitude, artisans, and the world's finest fiber.</p>
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay">
+    <a href="/shop" class="nav-link">Shop</a>
+    <a href="/story" class="nav-link">Our Story</a>
+    <a href="/wholesale" class="nav-link">Wholesale</a>
   </div>
 
-  <article class="story-page">
-    
-    <div class="story-image reveal">
-      <img src="https://images.unsplash.com/photo-1718429205172-0d91b73ab23c?w=1200&q=85&fit=crop" 
-           alt="Himalayan mountains" loading="lazy">
+  <main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO (half height, earth-deep bg)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="story-hero">
+    <div class="story-hero-content">
+      <p class="eyebrow reveal reveal-d1">KORA Himalayan Cashmere</p>
+      <h1 class="story-hero-title reveal reveal-d2">Our Story</h1>
+      <p class="story-hero-subtitle reveal reveal-d3">Three generations of Kathmandu artisans</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       THE ORIGIN (cream bg, 2-column)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="origin-section">
+    <div class="origin-grid">
+      <div class="origin-text reveal reveal-d1">
+        <p class="eyebrow">The Origin</p>
+        <h2>Born of the Himalaya</h2>
+        <p>The Himalayan cashmere goat has roamed the high plateaus of Nepal for centuries. In the Kathmandu Valley, three generations of our family have transformed this precious fibre into garments that carry the warmth of the mountains.</p>
+        <p>It begins at altitudes above 4,000 meters, where the Changthangi goat grows its fine undercoat against the bitter cold. Each spring, the raw cashmere is hand-combed — never sheared — preserving the animal's well-being and the integrity of each precious strand.</p>
+        <p>From these remote highlands to the valley looms of Kathmandu, every fibre carries with it the story of a landscape that has shaped our craft for as long as anyone can remember.</p>
+      </div>
+      <div class="origin-image reveal reveal-d2">
+        <img src="/img/craft/himalayas.jpg" alt="Himalayan mountain landscape" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       THE MAKERS (sand-light bg)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="makers-section">
+    <div class="makers-header reveal">
+      <p class="eyebrow">Meet Our Artisans</p>
+      <h2>Hands That Weave Heritage</h2>
+      <p>Behind every KORA garment are the skilled hands of Kathmandu's finest artisans — women who have dedicated their lives to the craft of cashmere.</p>
+    </div>
+    <div class="makers-grid">
+      <div class="maker-card reveal reveal-d1">
+        <div class="maker-portrait">
+          <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=300&q=80&fit=crop&auto=format" alt="Asha — Master Weaver" loading="lazy">
+        </div>
+        <p class="maker-name">Asha</p>
+        <p class="maker-title">Master Weaver</p>
+        <p class="maker-experience">28 years of experience</p>
+        <p class="maker-quote">Every thread I weave carries a prayer for the one who will wear it. Cashmere is not just a fibre — it is a conversation between the mountains and the hands that shape them.</p>
+      </div>
+      <div class="maker-card reveal reveal-d2">
+        <div class="maker-portrait">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&q=80&fit=crop&auto=format" alt="Maya — Embroidery Artist" loading="lazy">
+        </div>
+        <p class="maker-name">Maya</p>
+        <p class="maker-title">Embroidery Artist</p>
+        <p class="maker-experience">15 years of experience</p>
+        <p class="maker-quote">My grandmother taught me to embroider when I was seven. The needle in my hand feels like an extension of myself. Each stitch tells a story only the wearer will truly understand.</p>
+      </div>
+      <div class="maker-card reveal reveal-d3">
+        <div class="maker-portrait">
+          <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=300&q=80&fit=crop&auto=format" alt="Durga — Quality Master" loading="lazy">
+        </div>
+        <p class="maker-name">Durga</p>
+        <p class="maker-title">Quality Master</p>
+        <p class="maker-experience">20 years of experience</p>
+        <p class="maker-quote">Quality is not a final check — it is present in every step. From the first sorting of fibres to the last finishing touch, I feel the garment and know if it is ready to carry our name.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       THE CRAFT (earth-deep bg, cream text)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="craft-section">
+    <div class="craft-header reveal">
+      <p class="eyebrow">The Process</p>
+      <h2>From Fibre to Finished Piece</h2>
+      <p>Every KORA garment passes through four generations of care — each step guided by hand, each stage a tradition refined over decades.</p>
+    </div>
+    <div class="craft-steps">
+      <div class="craft-step reveal reveal-d1">
+        <p class="craft-step-number">Step 01</p>
+        <div class="craft-step-icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M32 4C16 4 8 16 8 28c0 20 24 32 24 32s24-12 24-32c0-12-8-24-24-24z"/>
+            <circle cx="32" cy="24" r="10"/>
+            <path d="M28 24h8"/>
+            <path d="M32 20v8"/>
+          </svg>
+        </div>
+        <h3>Sourcing</h3>
+        <p>Raw cashmere is hand-combed from Changthangi goats in the high Himalayas. Only the finest undercoat fibres are selected, ensuring exceptional softness from the very beginning.</p>
+      </div>
+      <div class="craft-step reveal reveal-d2">
+        <p class="craft-step-number">Step 02</p>
+        <div class="craft-step-icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 44c0-8 8-16 16-16s16 8 16 16"/>
+            <path d="M24 28V8"/>
+            <path d="M16 12l8-4 8 4"/>
+            <path d="M12 44l4-8 8 4 8-4 4 8"/>
+            <path d="M48 36h12"/>
+            <path d="M54 30v12"/>
+          </svg>
+        </div>
+        <h3>Spinning</h3>
+        <p>On traditional charkha wheels, the raw fibres are spun into delicate yet durable yarn. This slow, rhythmic process preserves the natural loft and breathability of the cashmere.</p>
+      </div>
+      <div class="craft-step reveal reveal-d3">
+        <p class="craft-step-number">Step 03</p>
+        <div class="craft-step-icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="8" y="20" width="48" height="32" rx="2"/>
+            <path d="M8 28h48"/>
+            <path d="M16 20V12h8v8"/>
+            <path d="M32 20V8h8v12"/>
+            <path d="M48 20V14h8v6"/>
+            <path d="M16 36h8"/>
+            <path d="M40 36h8"/>
+            <path d="M16 44h6"/>
+            <path d="M42 44h6"/>
+          </svg>
+        </div>
+        <h3>Weaving</h3>
+        <p>On hand-operated wooden looms, our master weavers transform yarn into fabric. Each row is pulled tight by hand, creating a dense, durable weave that will last for generations.</p>
+      </div>
+      <div class="craft-step reveal reveal-d4">
+        <p class="craft-step-number">Step 04</p>
+        <div class="craft-step-icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 16h40v32H12z"/>
+            <path d="M12 24h40"/>
+            <path d="M24 16v32"/>
+            <path d="M40 16v32"/>
+            <circle cx="20" cy="36" r="2"/>
+            <circle cx="44" cy="40" r="2"/>
+            <path d="M52 12l4-4"/>
+            <path d="M8 12l-4-4"/>
+          </svg>
+        </div>
+        <h3>Finishing</h3>
+        <p>Each garment is hand-washed in soft water, gently stretched to shape, and inspected stitch by stitch. Only when our Quality Master is satisfied does it receive the KORA label.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       OUR VALUES (cream bg, 4 cards)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="values-story-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal">Our Values</h2>
+        <p class="section-subtitle reveal reveal-d1">Rooted in respect — for people, place, and process</p>
+      </div>
+      <div class="values-story-grid">
+        <div class="value-card reveal reveal-d1">
+          <div class="value-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M32 4C20 4 12 14 12 24c0 16 20 36 20 36s20-20 20-36c0-10-8-20-20-20z"/>
+              <circle cx="32" cy="22" r="8"/>
+              <path d="M28 22h8"/>
+              <path d="M32 18v8"/>
+            </svg>
+          </div>
+          <h3>Ethical Sourcing</h3>
+          <p>Our cashmere comes from free-ranging Changthangi goats in the high Himalayas. We work directly with herder cooperatives, ensuring fair trade and full traceability from mountain to loom.</p>
+        </div>
+        <div class="value-card reveal reveal-d2">
+          <div class="value-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="32" cy="20" r="12"/>
+              <path d="M20 32l12 8 12-8"/>
+              <path d="M20 38l12 8 12-8"/>
+              <path d="M20 44l12 8 12-8"/>
+              <circle cx="32" cy="20" r="4"/>
+            </svg>
+          </div>
+          <h3>Women Empowerment</h3>
+          <p>Our workshop is led and staffed primarily by women artisans. We provide fair wages, flexible hours, skill development, and a supportive environment where craft traditions are passed on.</p>
+        </div>
+        <div class="value-card reveal reveal-d3">
+          <div class="value-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="32" cy="32" r="28"/>
+              <path d="M32 12v20l12 12"/>
+              <path d="M16 32h32"/>
+            </svg>
+          </div>
+          <h3>Zero Waste</h3>
+          <p>Every scrap of cashmere is repurposed. Fibre offcuts become felted accessories, yarn remnants are woven into patchwork throws, and even the dust is composted. Nothing goes to landfill.</p>
+        </div>
+        <div class="value-card reveal reveal-d4">
+          <div class="value-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="32" width="48" height="24" rx="2"/>
+              <path d="M8 32l24-16 24 16"/>
+              <path d="M28 44h8"/>
+              <path d="M28 48h8"/>
+              <path d="M32 44v8"/>
+              <path d="M16 56V20"/>
+              <path d="M48 56V20"/>
+              <path d="M16 28h4"/>
+              <path d="M44 28h4"/>
+            </svg>
+          </div>
+          <h3>Fair Wages</h3>
+          <p>We believe that true luxury cannot exist without dignity. Our artisans earn well above fair-trade standards, with health benefits, paid leave, and a share in the company's success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER (earth-deep)
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">KORA</div>
+        <p class="footer-description">Himalayan Cashmere, handcrafted in Nepal. Three generations of artisan tradition, woven into every thread.</p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h4 class="footer-heading">Navigate</h4>
+        <div class="footer-links">
+          <a href="/shop" class="footer-link">Shop</a>
+          <a href="/story" class="footer-link">Our Story</a>
+          <a href="/wholesale" class="footer-link">Wholesale</a>
+          <a href="mailto:hello@koracashmere.com" class="footer-link">Contact</a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h4 class="footer-heading">Newsletter</h4>
+        <p>Softness, delivered. Be the first to know about new collections, artisan stories, and exclusive releases.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing.');this.querySelector('input').value='';">
+          <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+          <button type="submit" class="newsletter-submit">Subscribe</button>
+        </form>
+      </div>
     </div>
 
-    <h2 class="reveal reveal-d1">The Fiber</h2>
-    <p class="reveal reveal-d2">At 4,000 meters above sea level, winter temperatures drop to −40°C. The Changthangi goat survives by growing an undercoat that engineering cannot replicate — fibers 12 to 15 microns in diameter, finer than the finest merino.</p>
-    <p class="reveal reveal-d2">Each spring, nomadic herders comb the goats by hand during the natural molting season. One goat yields approximately 150 grams of raw cashmere per year. A single Kora scarf requires the annual harvest of three goats.</p>
-    <p class="reveal reveal-d2">This scarcity is not a marketing story. It is the definition of luxury — something rare because nature made it so.</p>
-    
-    <div class="story-image reveal">
-      <img src="https://images.unsplash.com/photo-1720102438489-116161909a6e?w=1200&q=85&fit=crop" 
-           alt="Artisan weaving" loading="lazy">
+    <div class="footer-bottom">
+      <span class="footer-bottom-text">&copy; 2026 KORA Cashmere. All rights reserved.</span>
+      <span class="footer-bottom-text">
+        <a href="/privacy/" class="footer-link" style="opacity:0.7;font-size:12px;">Privacy Policy</a>
+        <span style="opacity:0.3;margin:0 8px;">·</span>
+        <a href="/terms/" class="footer-link" style="opacity:0.7;font-size:12px;">Terms of Service</a>
+      </span>
     </div>
-
-    <h2 class="reveal reveal-d1">The Hands</h2>
-    <p class="reveal reveal-d2">In the Kathmandu Valley, weaving cashmere is not a trade — it is inheritance. The families we work with have been spinning and weaving for three generations. Grandmothers teach daughters, who teach their daughters.</p>
-    <p class="reveal reveal-d2">Every Kora piece begins on a traditional charkha — a hand-spinning wheel that has not changed in centuries. The spinner's hands control the tension, the twist, the thickness. No machine can replicate this judgment because no machine can feel the fiber.</p>
-    <p class="reveal reveal-d2">One scarf takes approximately eight hours to weave. A blanket takes three days. There are no shortcuts.</p>
-    
-    <div class="story-image reveal">
-      <img src="https://images.unsplash.com/photo-1603906650843-b58e94d9df4d?w=1200&q=85&fit=crop" 
-           alt="Cashmere fabric detail" loading="lazy">
-    </div>
-
-    <h2 class="reveal reveal-d1">The Promise</h2>
-    <p class="reveal reveal-d2">Kora means "circle" in Nepali — the sacred circumambulation of a mountain. We chose this name because our pieces are designed to complete circles: from goat to hand, from Nepal to you, and eventually from you to the next generation.</p>
-    <p class="reveal reveal-d2">We pay our artisan families directly — no middlemen, no agents, no factory owners. Fair wages are not a feature; they are the foundation. When you purchase a Kora piece, you are supporting the preservation of a craft that machines cannot replicate.</p>
-    <p class="reveal reveal-d2">Cashmere gets softer with age. Wear them. Pass them on. The circle continues.</p>
-
-  </article>
-</main>
-
-<footer class="footer">
-  <div class="footer-grid">
-    <div><h4>KORA</h4><p>Himalayan Cashmere<br>Handmade in Nepal</p></div>
-    <div><h4>Shop</h4><a href="/shop#sweaters">Sweaters</a><a href="/shop#accessories">Accessories</a></div>
-    <div><h4>About</h4><a href="/story">Our Story</a><a href="/wholesale">Wholesale</a><a href="mailto:hello@koracashmere.com">Contact</a></div>
-  </div>
-  <div class="footer-bottom"><span>&copy; 2026 KORA. All rights reserved.</span></div>
   </footer>
 
-<script src="/js/products.js"></script>
-<script src="/js/interactions.js"></script>
-<script src="/js/main.js"></script>
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <div id="snipcart" data-api-key="YOUR_SNIPCART_KEY" hidden></div>
+
+  <script src="/js/products.js"></script>
+  <script src="/js/main.js"></script>
+
 </body>
 </html>

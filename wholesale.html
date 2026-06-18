@@ -3,103 +3,429 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wholesale — KORA Cashmere | Partner with Himalayan Cashmere Artisans</title>
-<meta name="description" content="Wholesale partnerships with KORA Himalayan Cashmere. Boutique retail, hotel hospitality, and private label programs. Direct from Kathmandu artisans.">
-<meta name="keywords" content="cashmere wholesale, himalayan cashmere wholesale, cashmere supplier nepal, luxury cashmere wholesale, private label cashmere, hotel cashmere">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<title>Wholesale — KORA Cashmere | B2B Partnerships &amp; Bulk Orders</title>
+<meta name="description" content="Partner with KORA Cashmere for wholesale. Boutique retail, hotel hospitality, private label programs, and bulk orders of Himalayan cashmere — direct from Kathmandu artisans.">
+<meta name="keywords" content="cashmere wholesale, himalayan cashmere wholesale, cashmere supplier nepal, luxury cashmere wholesale, private label cashmere, hotel cashmere, b2b cashmere">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://koracashmere.com/wholesale">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style-v4.css">
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
-<meta property="og:title" content="Wholesale — KORA Cashmere">
-<meta property="og:description" content="Wholesale partnerships. Boutique, hotel, and private label programs.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Wholesale — KORA Cashmere | B2B Partnerships">
+<meta property="og:description" content="Partner with KORA. Bring Himalayan cashmere to your store. Boutique, hotel, and private label wholesale programs.">
 <meta property="og:url" content="https://koracashmere.com/wholesale">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="KORA Cashmere">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wholesale — KORA Cashmere | B2B Partnerships">
+<meta name="twitter:description" content="Partner with KORA. Bring Himalayan cashmere to your store.">
+
+<!-- Snipcart -->
+<script async src="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.js"></script>
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.css">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://koracashmere.com/#organization",
+  "name": "KORA Cashmere",
+  "alternateName": ["KORA Himalayan Cashmere", "KORA Nepal"],
+  "url": "https://koracashmere.com",
+  "email": "hello@koracashmere.com",
+  "description": "Luxury Himalayan cashmere, handcrafted by three generations of artisans in the Kathmandu Valley.",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Kathmandu Valley, Nepal"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "NP"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://koracashmere.com/#website",
+  "url": "https://koracashmere.com",
+  "name": "KORA Cashmere",
+  "description": "Luxury Himalayan cashmere, handcrafted in Nepal",
+  "inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://koracashmere.com/"},
+    {"@type":"ListItem","position":2,"name":"Wholesale","item":"https://koracashmere.com/wholesale"}
+  ]
+}
+</script>
+
+<style>
+/* ─── Wholesale Page v4 Styles ─── */
+
+.wholesale-hero {
+  padding: 160px 24px 80px;
+  text-align: center;
+  background-color: var(--cream);
+}
+
+.wholesale-hero .section-title {
+  margin-bottom: 16px;
+}
+
+.wholesale-hero .section-subtitle {
+  max-width: 540px;
+  margin: 0 auto;
+  color: var(--stone);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ── Program Cards ── */
+.wholesale-programs {
+  padding: 80px 24px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.wholesale-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.wholesale-card {
+  background: var(--cream);
+  padding: 40px 32px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wholesale-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  color: var(--earth);
+}
+
+.wholesale-card p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--stone);
+  line-height: 1.7;
+}
+
+/* ── Inquiry Form ── */
+.wholesale-form-section {
+  padding: 80px 24px 100px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.wholesale-form-section .form-heading {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.wholesale-form-section .form-subheading {
+  text-align: center;
+  color: var(--stone);
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.wholesale-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wholesale-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.wholesale-form input,
+.wholesale-form select,
+.wholesale-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--cream);
+  border: 1px solid var(--sand);
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--earth);
+  transition: border-color var(--transition-base);
+  outline: none;
+}
+
+.wholesale-form input:focus,
+.wholesale-form select:focus,
+.wholesale-form textarea:focus {
+  border-color: var(--terracotta);
+}
+
+.wholesale-form input::placeholder,
+.wholesale-form textarea::placeholder {
+  color: var(--stone-light);
+}
+
+.wholesale-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.wholesale-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%238a7f76' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.wholesale-form .btn-submit {
+  width: 100%;
+  padding: 16px 32px;
+  background-color: var(--terracotta);
+  color: var(--warm-white);
+  border: 1px solid var(--terracotta);
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  line-height: 1;
+}
+
+.wholesale-form .btn-submit:hover {
+  background-color: var(--terracotta-light);
+  border-color: var(--terracotta-light);
+}
+
+/* ── Contact Info ── */
+.wholesale-contact {
+  text-align: center;
+  padding: 0 24px 100px;
+}
+
+.wholesale-contact h4 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--earth);
+  margin-bottom: 8px;
+}
+
+.wholesale-contact a {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--terracotta);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.wholesale-contact a:hover {
+  color: var(--terracotta-light);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .wholesale-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wholesale-form .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .wholesale-hero {
+    padding: 140px 20px 60px;
+  }
+
+  .wholesale-programs {
+    padding: 60px 20px;
+  }
+
+  .wholesale-form-section {
+    padding: 60px 20px 80px;
+  }
+}
+</style>
 </head>
 <body>
 
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="/" class="logo">KORA</a>
-    <nav class="nav-links">
-      <a href="/shop">Shop</a>
-      <a href="/story">Our Story</a>
-      <a href="/wholesale">Wholesale</a>
-      <button class="cart-btn snipcart-checkout" aria-label="Cart">
-        <span class="cart-label">Bag</span>
-        <span class="snipcart-items-count cart-count">0</span>
+  <!-- ═══════════════════════════════════════════════════════
+       NAV (fixed)
+       ═══════════════════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <a href="/" class="nav-logo">KORA</a>
+    <div class="nav-links">
+      <a href="/shop" class="nav-link">Shop</a>
+      <a href="/story" class="nav-link">Our Story</a>
+      <a href="/wholesale" class="nav-link">Wholesale</a>
+      <button class="nav-cart snipcart-checkout" aria-label="Shopping cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="snipcart-items-count">0</span>
       </button>
-    </nav>
-    <button class="hamburger" aria-label="Menu">
+    </div>
+    <button class="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
-  </div>
-</header>
+  </header>
 
-<div class="mobile-overlay">
-  <a href="/shop">Shop</a>
-  <a href="/story">Our Story</a>
-  <a href="/wholesale">Wholesale</a>
-</div>
-
-<main>
-  <div class="page-header reveal">
-    <p class="section-label">Wholesale</p>
-    <h1>Partner With Kora</h1>
-    <p>Bring handcrafted Himalayan cashmere to your boutique, hotel, or concept store.</p>
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay">
+    <a href="/shop" class="nav-link">Shop</a>
+    <a href="/story" class="nav-link">Our Story</a>
+    <a href="/wholesale" class="nav-link">Wholesale</a>
   </div>
 
-  <section class="wholesale-page">
-    
-    <div class="wholesale-card reveal reveal-d1">
-      <h3>Boutiques &amp; Concept Stores</h3>
-      <p>Curated selection of our signature pieces for retail. Minimum order: €2,500. Custom labeling and packaging available. EU shipping from our Kathmandu atelier via DHL Express — delivery in 3–5 business days.</p>
-    </div>
-    
-    <div class="wholesale-card reveal reveal-d2">
-      <h3>Hotels &amp; Hospitality</h3>
-      <p>Custom blankets, throws, and amenities for luxury properties. Bespoke sizing, colours, and monogramming available. Minimum order: €8,000.</p>
-    </div>
-    
-    <div class="wholesale-card reveal reveal-d3">
-      <h3>Private Label</h3>
-      <p>Your brand, our craftsmanship. Full white-label production with your labels and packaging. Minimum order: €15,000. Lead time: 8–12 weeks.</p>
-    </div>
+  <main>
 
-    <div class="wholesale-card reveal reveal-d4" style="background:var(--cream);">
-      <h3 style="text-align:center;">Begin the Conversation</h3>
-      <p style="text-align:center;margin-bottom:24px;">Tell us about your project and we'll respond within 24 hours.</p>
-      <form class="wholesale-form" onsubmit="event.preventDefault();alert('Thank you.')">
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Your email" required>
-        <input type="text" placeholder="Company / Store name">
-        <select>
-          <option value="">Partnership type</option>
-          <option>Boutique / Retail</option>
-          <option>Hotel / Hospitality</option>
-          <option>Private Label</option>
-          <option>Other</option>
-        </select>
-        <textarea placeholder="Tell us about your project"></textarea>
-        <button type="submit" class="btn btn-gold" style="width:100%;border:none;font-family:var(--sans);cursor:pointer;">Send Inquiry</button>
-      </form>
+  <!-- ═══════════════════════════════════════════════════════
+       WHOLESALE HERO
+       ═══════════════════════════════════════════════════════ -->
+  <section class="wholesale-hero">
+    <div class="container">
+      <p class="eyebrow reveal">B2B Partnerships</p>
+      <h1 class="section-title reveal reveal-d1">Wholesale Inquiries</h1>
+      <p class="section-subtitle reveal reveal-d2">Partner with KORA. Bring Himalayan cashmere to your store.</p>
     </div>
-
   </section>
-</main>
 
-<footer class="footer">
-  <div class="footer-grid">
-    <div><h4>KORA</h4><p>Himalayan Cashmere<br>Handmade in Nepal</p></div>
-    <div><h4>Shop</h4><a href="/shop#sweaters">Sweaters</a><a href="/shop#accessories">Accessories</a></div>
-    <div><h4>About</h4><a href="/story">Our Story</a><a href="/wholesale">Wholesale</a><a href="mailto:hello@koracashmere.com">Contact</a></div>
-  </div>
-  <div class="footer-bottom"><span>&copy; 2026 KORA. All rights reserved.</span></div>
-</footer>
+  <!-- ═══════════════════════════════════════════════════════
+       PROGRAM CARDS
+       ═══════════════════════════════════════════════════════ -->
+  <section class="wholesale-programs">
+    <div class="wholesale-grid">
+      <div class="wholesale-card reveal reveal-d1">
+        <h3>Boutiques &amp; Concept Stores</h3>
+        <p>Curated selection of our signature pieces for retail. Minimum order: €2,500. Custom labeling and packaging available. EU shipping from our Kathmandu atelier via DHL Express — delivery in 3–5 business days.</p>
+      </div>
+      <div class="wholesale-card reveal reveal-d2">
+        <h3>Hotels &amp; Hospitality</h3>
+        <p>Custom blankets, throws, and amenities for luxury properties. Bespoke sizing, colours, and monogramming available. Minimum order: €8,000.</p>
+      </div>
+      <div class="wholesale-card reveal reveal-d3">
+        <h3>Private Label</h3>
+        <p>Your brand, our craftsmanship. Full white-label production with your labels and packaging. Minimum order: €15,000. Lead time: 8–12 weeks.</p>
+      </div>
+    </div>
+  </section>
 
-<script src="/js/products.js"></script>
-<script src="/js/interactions.js"></script>
-<script src="/js/main.js"></script>
+  <!-- ═══════════════════════════════════════════════════════
+       INQUIRY FORM
+       ═══════════════════════════════════════════════════════ -->
+  <section class="wholesale-form-section">
+    <div class="reveal">
+      <h2 class="form-heading section-title" style="margin-bottom:8px;">Begin the Conversation</h2>
+      <p class="form-subheading">Tell us about your project and we'll respond within 24 hours.</p>
+    </div>
+    <form class="wholesale-form reveal reveal-d1" action="https://formspree.io/f/xwpkqyra" method="POST">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+      </div>
+      <div class="form-row">
+        <input type="text" name="company" placeholder="Company name" required>
+        <input type="text" name="country" placeholder="Country" required>
+      </div>
+      <select name="partnership" required>
+        <option value="">Partnership type</option>
+        <option value="boutique">Boutique / Retail</option>
+        <option value="hotel">Hotel / Hospitality</option>
+        <option value="private-label">Private Label</option>
+        <option value="other">Other</option>
+      </select>
+      <textarea name="message" placeholder="Tell us about your project, including desired products, quantities, and timeline." required></textarea>
+      <button type="submit" class="btn-submit">Send Inquiry</button>
+    </form>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CONTACT INFO
+       ═══════════════════════════════════════════════════════ -->
+  <section class="wholesale-contact reveal">
+    <h4>Questions?</h4>
+    <a href="mailto:hello@koracashmere.com">hello@koracashmere.com</a>
+  </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER (earth-deep)
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">KORA</div>
+        <p class="footer-description">Himalayan Cashmere, handcrafted in Nepal. Three generations of artisan tradition, woven into every thread.</p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h4 class="footer-heading">Navigate</h4>
+        <div class="footer-links">
+          <a href="/shop" class="footer-link">Shop</a>
+          <a href="/story" class="footer-link">Our Story</a>
+          <a href="/wholesale" class="footer-link">Wholesale</a>
+          <a href="mailto:hello@koracashmere.com" class="footer-link">Contact</a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h4 class="footer-heading">Newsletter</h4>
+        <p>Softness, delivered. Be the first to know about new collections, artisan stories, and exclusive releases.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing.');this.querySelector('input').value='';">
+          <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+          <button type="submit" class="newsletter-submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-bottom-text">&copy; 2026 KORA Cashmere. All rights reserved.</span>
+      <span class="footer-bottom-text">
+        <a href="/privacy/" class="footer-link" style="opacity:0.7;font-size:12px;">Privacy Policy</a>
+        <span style="opacity:0.3;margin:0 8px;">·</span>
+        <a href="/terms/" class="footer-link" style="opacity:0.7;font-size:12px;">Terms of Service</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <div id="snipcart" data-api-key="YOUR_SNIPCART_KEY" hidden></div>
+
+  <script src="/js/products.js"></script>
+  <script src="/js/main.js"></script>
+
 </body>
 </html>
