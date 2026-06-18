@@ -10,7 +10,7 @@
 <link rel="canonical" href="https://koracashmere.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style-v10.css">
+<link rel="stylesheet" href="/css/style-v11.css">
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
 
 <!-- Open Graph -->
@@ -628,6 +628,9 @@
 </head>
 <body>
 
+  <!-- Announcement Bar -->
+  <div class="announcement">Free shipping to EU <body>amp; CH · <strong>Handcrafted in Nepal</strong> · 3 Generations of Artisans</div>
+
 <!-- ═══════════════ NAV ═══════════════ -->
 <header class="nav" id="nav">
   <a href="/" class="nav-logo">KORA</a>
@@ -718,7 +721,13 @@
       <h2>Sweaters That Carry a Story</h2>
       <p>Three silhouettes. One fibre. Each piece hand-finished in the Kathmandu Valley — timeless, effortless, eternal.</p>
     </div>
-    <div id="sweater-grid" class="product-grid reveal reveal-d1"></div>
+    <div id="sweater-grid" class="product-grid reveal reveal-d1">
+      <div class="skeleton-grid" style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:32px">
+        <div class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line"></div><div class="skeleton-line"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line"></div><div class="skeleton-line"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line"></div><div class="skeleton-line"></div></div></div>
+      </div>
+    </div>
     <div class="text-center mt-32 reveal reveal-d2">
       <a href="/shop" class="btn btn-secondary">View Full Collection</a>
     </div>
@@ -906,8 +915,8 @@
 </footer>
 
 <div id="snipcart" data-api-key="YOUR_SNIPCART_KEY" hidden></div>
-<script src="/js/products-v13.js"></script>
-<script src="/js/main-v8.js"></script>
+<script src="/js/products-v14.js"></script>
+<script src="/js/main-v9.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
