@@ -149,12 +149,12 @@ function renderShopGrid(filter) {
             <img src="${shopImg}" alt="${product.name}" loading="lazy">
           </div>
         </a>
-        <div class="product-card-info">
+        <div class="product-card-body">
           <a href="/product?p=${product.slug}" class="product-card-name-link">
-            <h3 class="product-card-name">${product.name}</h3>
+            <h3 class="product-card-title">${product.name}</h3>
           </a>
           <div class="product-card-price">€${product.price}</div>
-          <div class="product-card-swatches">${swatches}</div>
+          <div class="product-card-colors">${swatches}</div>
           <button class="snipcart-add-item btn btn-primary"
             data-item-id="${product.slug}"
             data-item-name="${product.name}"
