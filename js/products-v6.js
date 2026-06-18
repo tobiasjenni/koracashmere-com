@@ -15,7 +15,7 @@ const PRODUCTS = [
     description: 'The quintessential V-neck, draping softly at the collarbone. Woven from the finest Himalayan fibres for effortless elegance.',
     colors: [COLORS.cream, COLORS.fawn, COLORS.charcoal],
     imagesByColor: {
-      cream:    '/img/products/shop-vneck-cream.jpg',
+      cream:    '/img/products/shop-vneck.jpg',
       fawn:     '/img/products/shop-vneck-fawn.jpg',
       charcoal: '/img/products/shop-vneck-charcoal.jpg'
     },
@@ -36,7 +36,7 @@ const PRODUCTS = [
     colors: [COLORS.cream, COLORS.fawn, COLORS.charcoal],
     imagesByColor: {
       cream:    '/img/products/shop-crewneck-cream.jpg',
-      fawn:     '/img/products/shop-crewneck-fawn.jpg',
+      fawn:     '/img/products/shop-crewneck.jpg',
       charcoal: '/img/products/shop-crewneck-charcoal.jpg'
     },
     image: '/img/products/shop-crewneck.jpg',
@@ -57,7 +57,7 @@ const PRODUCTS = [
     imagesByColor: {
       cream:    '/img/products/shop-turtleneck-cream.jpg',
       fawn:     '/img/products/shop-turtleneck-fawn.jpg',
-      charcoal: '/img/products/shop-turtleneck-charcoal.jpg'
+      charcoal: '/img/products/shop-turtleneck.jpg'
     },
     image: '/img/products/shop-turtleneck.jpg',
     material: '100% Himalayan Cashmere',
@@ -75,7 +75,7 @@ const PRODUCTS = [
     description: 'Draped softly around the shoulders or tied with intention. An heirloom-weight scarf touched by Himalayan hands.',
     colors: [COLORS.cream, COLORS.fawn, COLORS.charcoal],
     imagesByColor: {
-      cream:    '/img/products/shop-scarf-cream.jpg',
+      cream:    '/img/products/shop-scarf.jpg',
       fawn:     '/img/products/shop-scarf-fawn.jpg',
       charcoal: '/img/products/shop-scarf-charcoal.jpg'
     },
@@ -96,7 +96,7 @@ const PRODUCTS = [
     colors: [COLORS.cream, COLORS.fawn, COLORS.charcoal],
     imagesByColor: {
       cream:    '/img/products/shop-gloves-cream.jpg',
-      fawn:     '/img/products/shop-gloves-fawn.jpg',
+      fawn:     '/img/products/shop-gloves.jpg',
       charcoal: '/img/products/shop-gloves-charcoal.jpg'
     },
     image: '/img/products/shop-gloves.jpg',
@@ -117,7 +117,7 @@ const PRODUCTS = [
     imagesByColor: {
       cream:    '/img/products/shop-socks-cream.jpg',
       fawn:     '/img/products/shop-socks-fawn.jpg',
-      charcoal: '/img/products/shop-socks-charcoal.jpg'
+      charcoal: '/img/products/shop-socks.jpg'
     },
     image: '/img/products/shop-socks.jpg',
     material: '100% Himalayan Cashmere',
