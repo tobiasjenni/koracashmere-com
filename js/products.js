@@ -1,11 +1,8 @@
 // KORA Cashmere — Product Catalog
 const COLORS = {
-  cream:   { name: 'Cream',     hex: '#F5F0E8' },
-  walnut:  { name: 'Walnut',    hex: '#5C4033' },
-  terracotta: { name: 'Terracotta', hex: '#C8653E' },
-  saffron: { name: 'Saffron',   hex: '#E8B84B' },
-  charcoal:{ name: 'Charcoal',  hex: '#36454F' },
-  navy:    { name: 'Navy',      hex: '#1B2A4A' }
+  cream:    { name: 'Cream',     hex: '#F5F0E8' },
+  fawn:     { name: 'Fawn',      hex: '#C4A882' },
+  charcoal: { name: 'Charcoal',  hex: '#4A4A4A' }
 };
 
 const PRODUCTS = [
@@ -16,7 +13,7 @@ const PRODUCTS = [
     category: 'sweaters',
     slug: 'vneck-sweater',
     description: 'The quintessential V-neck, draping softly at the collarbone. Woven from the finest Himalayan fibres for effortless elegance.',
-    colors: [COLORS.cream, COLORS.walnut, COLORS.terracotta, COLORS.charcoal],
+    colors: [COLORS.cream, COLORS.fawn, COLORS.charcoal],
     // Product-only photography — no models, no faces, pure garment
     images: [
       '/img/products/shop-vneck.jpg'
@@ -34,7 +31,7 @@ const PRODUCTS = [
     category: 'sweaters',
     slug: 'crewneck-sweater',
     description: 'Pure comfort in its most honest form. A crewneck that hugs gently and endures seasons, dyed with earth\'s own pigments.',
-    colors: [COLORS.cream, COLORS.saffron, COLORS.navy, COLORS.charcoal],
+    colors: [COLORS.cream, COLORS.fawn, COLORS.charcoal],
     images: [
       '/img/products/shop-crewneck.jpg'
     ],
@@ -51,7 +48,7 @@ const PRODUCTS = [
     category: 'sweaters',
     slug: 'turtleneck-sweater',
     description: 'A cocoon of warmth. The double-layer turtleneck frames the face like a sculpture, soft as a mountain breeze.',
-    colors: [COLORS.cream, COLORS.terracotta, COLORS.charcoal, COLORS.navy],
+    colors: [COLORS.cream, COLORS.fawn, COLORS.charcoal],
     images: [
       '/img/products/shop-turtleneck.jpg'
     ],
@@ -68,7 +65,7 @@ const PRODUCTS = [
     category: 'accessories',
     slug: 'classic-scarf',
     description: 'Draped softly around the shoulders or tied with intention. An heirloom-weight scarf touched by Himalayan hands.',
-    colors: [COLORS.cream, COLORS.walnut, COLORS.terracotta, COLORS.saffron, COLORS.navy],
+    colors: [COLORS.cream, COLORS.fawn, COLORS.charcoal],
     images: [
       '/img/products/shop-scarf.jpg'
     ],
@@ -85,7 +82,7 @@ const PRODUCTS = [
     category: 'accessories',
     slug: 'cashmere-gloves',
     description: 'Touch the world softly. Touchscreen-ready fingertips meet Himalayan warmth in a glove that honours craft and connection.',
-    colors: [COLORS.walnut, COLORS.charcoal, COLORS.navy, COLORS.terracotta],
+    colors: [COLORS.cream, COLORS.fawn, COLORS.charcoal],
     images: [
       '/img/products/shop-gloves.jpg'
     ],
@@ -102,7 +99,7 @@ const PRODUCTS = [
     category: 'accessories',
     slug: 'cashmere-socks',
     description: 'Step into a secret luxury. Pure cashmere against the skin from heel to toe, hand-finished with care in every thread.',
-    colors: [COLORS.cream, COLORS.charcoal, COLORS.navy, COLORS.saffron],
+    colors: [COLORS.cream, COLORS.fawn, COLORS.charcoal],
     images: [
       '/img/products/shop-socks.jpg'
     ],
