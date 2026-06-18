@@ -1,5 +1,4 @@
 // KORA Cashmere — Product Catalog
-// Himalayan Earth Color Palette
 const COLORS = {
   cream:   { name: 'Cream',     hex: '#F5F0E8' },
   walnut:  { name: 'Walnut',    hex: '#5C4033' },
@@ -17,15 +16,11 @@ const PRODUCTS = [
     category: 'sweaters',
     slug: 'vneck-sweater',
     description: 'The quintessential V-neck, draping softly at the collarbone. Woven from the finest Himalayan fibres for effortless elegance.',
-    colors: [
-      COLORS.cream,
-      COLORS.walnut,
-      COLORS.terracotta,
-      COLORS.charcoal
-    ],
+    colors: [COLORS.cream, COLORS.walnut, COLORS.terracotta, COLORS.charcoal],
+    // [0] = real product photo (used in shop grid), [1+] = lifestyle/model shots
     images: [
-      '/img/models/model-vneck-female.jpg',
-      '/img/products/vneck-sweater.jpg'
+      '/img/products/vneck-real.jpg',
+      '/img/models/model-vneck-female.jpg'
     ],
     material: '100% Himalayan Cashmere',
     weight: '230gsm',
@@ -40,15 +35,11 @@ const PRODUCTS = [
     category: 'sweaters',
     slug: 'crewneck-sweater',
     description: 'Pure comfort in its most honest form. A crewneck that hugs gently and endures seasons, dyed with earth\'s own pigments.',
-    colors: [
-      COLORS.cream,
-      COLORS.saffron,
-      COLORS.navy,
-      COLORS.charcoal
-    ],
+    colors: [COLORS.cream, COLORS.saffron, COLORS.navy, COLORS.charcoal],
     images: [
-      '/img/models/model-crewneck-male.jpg',
-      '/img/products/crewneck-sweater.jpg'
+      '/img/products/crewneck-real.jpg',
+      '/img/products/crewneck-real-alt.jpg',
+      '/img/models/model-crewneck-male.jpg'
     ],
     material: '100% Himalayan Cashmere',
     weight: '230gsm',
@@ -63,15 +54,12 @@ const PRODUCTS = [
     category: 'sweaters',
     slug: 'turtleneck-sweater',
     description: 'A cocoon of warmth. The double-layer turtleneck frames the face like a sculpture, soft as a mountain breeze.',
-    colors: [
-      COLORS.cream,
-      COLORS.terracotta,
-      COLORS.charcoal,
-      COLORS.navy
-    ],
+    colors: [COLORS.cream, COLORS.terracotta, COLORS.charcoal, COLORS.navy],
     images: [
-      '/img/models/model-turtleneck-female.jpg',
-      '/img/products/turtleneck-sweater.jpg'
+      '/img/products/turtleneck-real.jpg',
+      '/img/products/turtleneck-real-alt1.jpg',
+      '/img/products/turtleneck-real-alt2.jpg',
+      '/img/models/model-turtleneck-female.jpg'
     ],
     material: '100% Himalayan Cashmere',
     weight: '230gsm',
@@ -86,16 +74,10 @@ const PRODUCTS = [
     category: 'accessories',
     slug: 'classic-scarf',
     description: 'Draped softly around the shoulders or tied with intention. An heirloom-weight scarf touched by Himalayan hands.',
-    colors: [
-      COLORS.cream,
-      COLORS.walnut,
-      COLORS.terracotta,
-      COLORS.saffron,
-      COLORS.navy
-    ],
+    colors: [COLORS.cream, COLORS.walnut, COLORS.terracotta, COLORS.saffron, COLORS.navy],
     images: [
-      '/img/models/model-scarf-female.jpg',
-      '/img/products/classic-scarf.jpg'
+      '/img/products/scarf-real.jpg',
+      '/img/models/model-scarf-female.jpg'
     ],
     material: '100% Himalayan Cashmere',
     weight: '180gsm',
@@ -110,15 +92,10 @@ const PRODUCTS = [
     category: 'accessories',
     slug: 'cashmere-gloves',
     description: 'Touch the world softly. Touchscreen-ready fingertips meet Himalayan warmth in a glove that honours craft and connection.',
-    colors: [
-      COLORS.walnut,
-      COLORS.charcoal,
-      COLORS.navy,
-      COLORS.terracotta
-    ],
+    colors: [COLORS.walnut, COLORS.charcoal, COLORS.navy, COLORS.terracotta],
     images: [
-      '/img/models/model-gloves-male.jpg',
-      '/img/products/cashmere-gloves.jpg'
+      '/img/products/cashmere-gloves.jpg',
+      '/img/models/model-gloves-male.jpg'
     ],
     material: '100% Himalayan Cashmere',
     weight: '160gsm',
@@ -133,15 +110,10 @@ const PRODUCTS = [
     category: 'accessories',
     slug: 'cashmere-socks',
     description: 'Step into a secret luxury. Pure cashmere against the skin from heel to toe, hand-finished with care in every thread.',
-    colors: [
-      COLORS.cream,
-      COLORS.charcoal,
-      COLORS.navy,
-      COLORS.saffron
-    ],
+    colors: [COLORS.cream, COLORS.charcoal, COLORS.navy, COLORS.saffron],
     images: [
-      '/img/models/model-socks-cozy.jpg',
-      '/img/products/cashmere-socks.jpg'
+      '/img/products/cashmere-socks.jpg',
+      '/img/models/model-socks-cozy.jpg'
     ],
     material: '100% Himalayan Cashmere',
     weight: '150gsm',
@@ -151,11 +123,6 @@ const PRODUCTS = [
   }
 ];
 
-/**
- * renderShopGrid(filter)
- * @param {string} filter - 'all', 'sweaters', or 'accessories'
- * @returns {string} HTML string of product cards
- */
 function renderShopGrid(filter) {
   const filtered = filter === 'all'
     ? PRODUCTS
@@ -166,39 +133,41 @@ function renderShopGrid(filter) {
       `<div class="color-swatch" style="background-color:${c.hex}" title="${c.name}"></div>`
     ).join('');
 
+    // Use first image (real product photo) for shop grid
+    const shopImg = product.images[0];
+
     return `
       <div class="product-card" data-category="${product.category}" data-slug="${product.slug}">
-        <div class="product-card-image">
-          <img src="${product.images[0]}" alt="${product.name}" loading="lazy">
-        </div>
+        <a href="/product?p=${product.slug}" class="product-card-image-link">
+          <div class="product-card-image">
+            <img src="${shopImg}" alt="${product.name}" loading="lazy">
+          </div>
+        </a>
         <div class="product-card-info">
-          <h3 class="product-card-name" style="font-family:'Cormorant Garamond',serif">${product.name}</h3>
+          <a href="/product?p=${product.slug}" class="product-card-name-link">
+            <h3 class="product-card-name">${product.name}</h3>
+          </a>
           <div class="product-card-price">€${product.price}</div>
           <div class="product-card-swatches">${swatches}</div>
-          <button class="snipcart-add-item"
+          <button class="snipcart-add-item btn btn-primary"
             data-item-id="${product.slug}"
             data-item-name="${product.name}"
             data-item-price="${product.price}"
             data-item-url="/product?p=${product.slug}"
-            data-item-image="${product.images[0]}"
+            data-item-image="${shopImg}"
             data-item-description="${product.description}">
             Add to Bag
           </button>
         </div>
       </div>
     `;
-  }).join('\n');
+  }).join('');
 }
 
-/**
- * renderProductPage(slug)
- * @param {string} slug - product slug identifier
- * @returns {string} HTML string of the full product detail page
- */
 function renderProductPage(slug) {
   const product = PRODUCTS.find(p => p.slug === slug);
   if (!product) {
-    return '<div class="product-not-found"><h2>Product not found</h2><p>The item you are looking for does not exist.</p></div>';
+    return '<div class="product-not-found"><h2>Product not found</h2><p><a href="/shop">Return to Shop</a></p></div>';
   }
 
   const swatches = product.colors.map(c =>
@@ -209,18 +178,27 @@ function renderProductPage(slug) {
     `<div class="size-option" data-size="${s}">${s}</div>`
   ).join('');
 
-  // Image gallery: model shot (primary) + product shots
-  const galleryImages = product.images.map((img, i) =>
-    `<img src="${img}" alt="${product.name}${i === 0 ? ' — Model' : ' — Detail'}" class="${i === 0 ? 'gallery-main' : 'gallery-thumb'}" loading="${i === 0 ? 'eager' : 'lazy'}">`
-  ).join('\n');
+  // Build image gallery: primary = real product photo (large), then thumbnail strip
+  const primaryImg = product.images[0];
+  const thumbnails = product.images.map((img, i) =>
+    `<img src="${img}" alt="${product.name} — ${i === 0 ? 'Product' : 'Detail'}" 
+         class="gallery-thumb${i === 0 ? ' active' : ''}" 
+         onclick="switchGalleryImage(this, '${img}')" 
+         loading="lazy">`
+  ).join('');
 
   return `
     <div class="product-detail">
-      <div class="product-detail-image">
-        ${galleryImages}
+      <div class="product-detail-gallery">
+        <div class="gallery-main-wrap">
+          <img id="gallery-main" src="${primaryImg}" alt="${product.name}" class="gallery-main">
+        </div>
+        <div class="gallery-thumb-strip">
+          ${thumbnails}
+        </div>
       </div>
       <div class="product-detail-info">
-        <h1 class="product-detail-name" style="font-family:'Cormorant Garamond',serif">${product.name}</h1>
+        <h1 class="product-detail-name">${product.name}</h1>
         <div class="product-detail-price">€${product.price}</div>
         <p class="product-detail-description">${product.description}</p>
 
@@ -234,36 +212,39 @@ function renderProductPage(slug) {
           <div class="product-size-options">${sizes}</div>
         </div>
 
-        <div class="product-detail-section product-specs">
+        <div class="product-specs">
           <div class="spec-row"><span class="spec-label">Material</span><span class="spec-value">${product.material}</span></div>
           <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">${product.weight}</span></div>
           <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-value">${product.origin}</span></div>
         </div>
 
-        <button class="snipcart-add-item product-add-to-bag"
+        <button class="snipcart-add-item product-add-to-bag btn btn-primary"
           data-item-id="${product.slug}"
           data-item-name="${product.name}"
           data-item-price="${product.price}"
           data-item-url="/product?p=${product.slug}"
-          data-item-image="${product.images[0]}"
+          data-item-image="${primaryImg}"
           data-item-description="${product.description}">
           Add to Bag — €${product.price}
         </button>
 
         <div class="meet-the-maker">
-          <div class="maker-card">
-            <div class="maker-details">
-              <h4 class="maker-name">Meet ${product.makerName}</h4>
-              <p class="maker-quote">"${product.makerQuote}"</p>
-            </div>
-          </div>
+          <h4 class="maker-name">Meet ${product.makerName}</h4>
+          <p class="maker-quote">"${product.makerQuote}"</p>
         </div>
       </div>
     </div>
   `;
 }
 
-// Export to window for global access
+// Gallery image switcher (global function)
+function switchGalleryImage(thumb, src) {
+  document.getElementById('gallery-main').src = src;
+  document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+}
+window.switchGalleryImage = switchGalleryImage;
+
 window.PRODUCTS = PRODUCTS;
 window.renderShopGrid = renderShopGrid;
 window.renderProductPage = renderProductPage;

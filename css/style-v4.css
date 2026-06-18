@@ -530,38 +530,78 @@ p:last-child {
 /* ---------- 14b. PRODUCT DETAIL PAGE ---------- */
 .product-detail {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
   align-items: start;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding-top: 120px;
+  padding: 140px 40px 80px;
 }
 
-.product-detail-image {
+.product-detail-gallery {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
-.product-detail-image .gallery-main {
+.gallery-main-wrap {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border-radius: 2px;
+  background: #f9f6f2;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-.product-detail-image .gallery-thumb {
+.gallery-main {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 2px;
-  opacity: 0.85;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  display: block;
   transition: opacity 0.3s;
 }
 
-.product-detail-image .gallery-thumb:hover {
+.gallery-thumb-strip {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 4px 0;
+}
+
+.gallery-thumb {
+  width: 72px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.6;
+  transition: all 0.25s;
+  flex-shrink: 0;
+}
+
+.gallery-thumb:hover {
+  opacity: 0.9;
+  border-color: var(--terracotta);
+}
+
+.gallery-thumb.active {
   opacity: 1;
+  border-color: var(--earth);
+}
+
+/* Shop card links */
+.product-card-image-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card-name-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card-name-link:hover .product-card-name {
+  color: var(--terracotta);
 }
 
 .product-detail-name {
@@ -1255,17 +1295,20 @@ p:last-child {
   .product-detail {
     grid-template-columns: 1fr;
     gap: 32px;
-    padding-top: 100px;
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
+    padding: 100px var(--container-padding) 60px;
   }
 
-  .product-detail-image .gallery-main {
-    aspect-ratio: 3 / 4;
+  .gallery-main {
+    aspect-ratio: 9 / 16;
+  }
+
+  .gallery-thumb {
+    width: 60px;
+    height: 80px;
   }
 
   .product-detail-name {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .product-add-to-bag {
