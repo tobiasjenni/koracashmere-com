@@ -19,6 +19,7 @@ const PRODUCTS = [
     colors: [COLORS.cream, COLORS.walnut, COLORS.terracotta, COLORS.charcoal],
     // [0] = real product photo (used in shop grid), [1+] = lifestyle/model shots
     images: [
+      '/img/products/shop-vneck.jpg',
       '/img/products/vneck-real.jpg',
       '/img/models/model-vneck-female.jpg'
     ],
@@ -37,6 +38,7 @@ const PRODUCTS = [
     description: 'Pure comfort in its most honest form. A crewneck that hugs gently and endures seasons, dyed with earth\'s own pigments.',
     colors: [COLORS.cream, COLORS.saffron, COLORS.navy, COLORS.charcoal],
     images: [
+      '/img/products/shop-crewneck.jpg',
       '/img/products/crewneck-real.jpg',
       '/img/products/crewneck-real-alt.jpg',
       '/img/models/model-crewneck-male.jpg'
@@ -56,6 +58,7 @@ const PRODUCTS = [
     description: 'A cocoon of warmth. The double-layer turtleneck frames the face like a sculpture, soft as a mountain breeze.',
     colors: [COLORS.cream, COLORS.terracotta, COLORS.charcoal, COLORS.navy],
     images: [
+      '/img/products/shop-turtleneck.jpg',
       '/img/products/turtleneck-real.jpg',
       '/img/products/turtleneck-real-alt1.jpg',
       '/img/products/turtleneck-real-alt2.jpg',
@@ -76,6 +79,7 @@ const PRODUCTS = [
     description: 'Draped softly around the shoulders or tied with intention. An heirloom-weight scarf touched by Himalayan hands.',
     colors: [COLORS.cream, COLORS.walnut, COLORS.terracotta, COLORS.saffron, COLORS.navy],
     images: [
+      '/img/products/shop-scarf.jpg',
       '/img/products/scarf-real.jpg',
       '/img/models/model-scarf-female.jpg'
     ],
@@ -94,6 +98,7 @@ const PRODUCTS = [
     description: 'Touch the world softly. Touchscreen-ready fingertips meet Himalayan warmth in a glove that honours craft and connection.',
     colors: [COLORS.walnut, COLORS.charcoal, COLORS.navy, COLORS.terracotta],
     images: [
+      '/img/products/shop-gloves.jpg',
       '/img/products/cashmere-gloves.jpg',
       '/img/models/model-gloves-male.jpg'
     ],
@@ -112,6 +117,7 @@ const PRODUCTS = [
     description: 'Step into a secret luxury. Pure cashmere against the skin from heel to toe, hand-finished with care in every thread.',
     colors: [COLORS.cream, COLORS.charcoal, COLORS.navy, COLORS.saffron],
     images: [
+      '/img/products/shop-socks.jpg',
       '/img/products/cashmere-socks.jpg',
       '/img/models/model-socks-cozy.jpg'
     ],
