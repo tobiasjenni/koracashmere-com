@@ -528,7 +528,7 @@ p:last-child {
 .product-card-image {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 3 / 4;
   background-color: var(--sand);
 }
 
@@ -1469,7 +1469,7 @@ p:last-child {
   }
 
   .newsletter-input {
-    border-right: 1px solid rgba(247, 242, 194, 0.15);
+    border-right: 1px solid rgba(247, 242, 234, 0.15);
     border-radius: 2px;
   }
 

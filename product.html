@@ -9,7 +9,7 @@
 <link rel="canonical" href="https://koracashmere.com/product">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style-v4.css">
+<link rel="stylesheet" href="/css/style-v6.css">
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
 
 <!-- Open Graph -->
@@ -513,6 +513,7 @@
           <a href="/shop" class="footer-link">Shop</a>
           <a href="/story" class="footer-link">Our Story</a>
           <a href="/wholesale" class="footer-link">Wholesale</a>
+          <a href="/size-guide" class="footer-link">Size Guide</a>
           <a href="mailto:hello@koracashmere.com" class="footer-link">Contact</a>
         </div>
       </div>
@@ -544,14 +545,93 @@
   <!-- Snipcart config -->
   <div id="snipcart" data-api-key="YOUR_SNIPCART_KEY" hidden></div>
 
-  <script src="/js/products-v11.js"></script>
-  <script src="/js/main-v7.js"></script>
+  <!-- Product Structured Data (injected dynamically) -->
+  <script type="application/ld+json" id="product-schema"></script>
+
+  <script src="/js/products-v12.js"></script>
+  <script src="/js/main-v8.js"></script>
 
   <script>
+  // ── Inject Product Schema JSON-LD ──
+  function injectProductSchema(product) {
+    var schema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "@id": "https://koracashmere.com/product?p=" + product.slug + "#product",
+      "name": product.name,
+      "description": product.description,
+      "image": "https://koracashmere.com" + product.image,
+      "sku": "KORA-" + product.slug.toUpperCase(),
+      "brand": {
+        "@type": "Brand",
+        "name": "KORA Himalayan Cashmere"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://koracashmere.com/product?p=" + product.slug,
+        "priceCurrency": "EUR",
+        "price": product.price,
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": ["DE","AT","CH","FR","IT","NL","BE","ES","GB","US"]
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {"@type": "QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"},
+            "transitTime": {"@type": "QuantitativeValue","minValue":3,"maxValue":5,"unitCode":"DAY"}
+          }
+        }
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "KORA Cashmere",
+        "location": {
+          "@type": "Place",
+          "name": "Kathmandu Valley, Nepal",
+          "address": {"@type":"PostalAddress","addressCountry":"NP","addressLocality":"Kathmandu"}
+        }
+      },
+      "material": product.material,
+      "countryOfOrigin": "NP"
+    };
+
+    // Add color variants
+    if (product.colors) {
+      schema["additionalProperty"] = [
+        {
+          "@type": "PropertyValue",
+          "name": "Available Colors",
+          "propertyID": "color",
+          "value": product.colors.map(function(c){return c.name;}).join(", ")
+        }
+      ];
+    }
+
+    // Add weight if available
+    if (product.weight) {
+      schema["weight"] = {
+        "@type": "QuantitativeValue",
+        "unitText": "gsm",
+        "value": product.weight.replace("gsm","")
+      };
+    }
+
+    document.getElementById('product-schema').textContent = JSON.stringify(schema, null, 2);
+  }
+
   // Parse URL parameter and render product detail page
   document.addEventListener('DOMContentLoaded', function() {
-    const params = new URLSearchParams(window.location.search);
-    const slug = params.get('p');
+    var params = new URLSearchParams(window.location.search);
+    var slug = params.get('p');
 
     if (!slug) {
       document.getElementById('product-detail').innerHTML =
@@ -559,8 +639,11 @@
       return;
     }
 
-    if (typeof renderProductPage === 'function') {
+    if (typeof renderProductPage === 'function' && typeof PRODUCTS !== 'undefined') {
       document.getElementById('product-detail').innerHTML = renderProductPage(slug);
+      // Inject Product Schema
+      var product = PRODUCTS.find(function(p){ return p.slug === slug; });
+      if (product) { injectProductSchema(product); }
     }
   });
   </script>
