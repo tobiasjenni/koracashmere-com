@@ -10,7 +10,7 @@
 <link rel="canonical" href="https://koracashmere.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style-v12.css">
+<link rel="stylesheet" href="/css/style-v13.css">
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
 
 <!-- Open Graph -->
@@ -709,12 +709,18 @@
   <img class="hero-bg-img" src="/img/models/hero-back-mountains.webp" alt="Himalayan Cashmere" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
+    <div class="hero-eyebrow-rule reveal reveal-d1"></div>
     <p class="eyebrow reveal reveal-d1">Handcrafted in Nepal</p>
-    <h1 class="hero-title reveal reveal-d2">Where the Himalaya<br>Touches the Skin</h1>
+    <h1 class="hero-title reveal reveal-d2">Where the Himalaya Touches the Skin</h1>
     <p class="hero-subtitle reveal reveal-d3">Hand-combed from Himalayan goats at 4,000 meters. Spun by three generations of master artisans in the Kathmandu Valley.</p>
-    <div class="reveal reveal-d4">
-      <a href="/shop" class="btn btn-primary btn-lg">Experience the Softness</a>
+    <div class="hero-ctas reveal reveal-d4">
+      <a href="/shop" class="btn btn-primary btn-lg">Discover the Collection</a>
+      <a href="/story" class="btn btn-secondary btn-lg" style="color:var(--cream);border-color:rgba(247,242,234,0.35);">Our Story</a>
     </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span class="scroll-label">Scroll</span>
   </div>
 </section>
 
@@ -778,6 +784,48 @@
   </div>
 </section>
 
+<!-- ══════════ PROCESS / ATELIER JOURNEY ══════════ -->
+<section class="process" id="process">
+  <div class="process-inner">
+    <div class="process-header reveal">
+      <p class="eyebrow">The Journey</p>
+      <h2>From 4,000m to Your Skin</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal reveal-d1">
+        <span class="process-num">01</span>
+        <h3 class="process-title">Comb</h3>
+        <div class="process-divider"></div>
+        <p class="process-desc">Hand-combed from Changthangi goats above 4,000m</p>
+      </div>
+      <div class="process-step reveal reveal-d2">
+        <span class="process-num">02</span>
+        <h3 class="process-title">Spin</h3>
+        <div class="process-divider"></div>
+        <p class="process-desc">Charkha-spun by hand into gossamer yarn</p>
+      </div>
+      <div class="process-step reveal reveal-d3">
+        <span class="process-num">03</span>
+        <h3 class="process-title">Dye</h3>
+        <div class="process-divider"></div>
+        <p class="process-desc">Earth-pigment dyes from walnut, indigo, madder</p>
+      </div>
+      <div class="process-step reveal reveal-d4">
+        <span class="process-num">04</span>
+        <h3 class="process-title">Weave</h3>
+        <div class="process-divider"></div>
+        <p class="process-desc">Wooden looms, three generations of memory</p>
+      </div>
+      <div class="process-step reveal reveal-d5">
+        <span class="process-num">05</span>
+        <h3 class="process-title">Finish</h3>
+        <div class="process-divider"></div>
+        <p class="process-desc">Hand-finished, inspected, blessed</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════ THE FIBRE ══════════ -->
 <section class="fibre">
   <div class="fibre-grid">
@@ -788,22 +836,23 @@
       <p>Each spring, when the goats naturally shed, herders hand-comb the precious fibres. One goat yields only 150 grams per year — barely enough for a single scarf. This scarcity is not a limitation. It is the foundation of everything we make.</p>
       <div class="fibre-stats">
         <div class="fibre-stat">
-          <p class="fibre-stat-value">&lt; 16 µ</p>
+          <p class="fibre-stat-value">&lt; 16 &micro;</p>
           <p class="fibre-stat-label">Finer than human hair</p>
         </div>
         <div class="fibre-stat">
-          <p class="fibre-stat-value">150 g</p>
+          <p class="fibre-stat-value counter" data-target="150">150</p>
           <p class="fibre-stat-label">Yield per goat per year</p>
         </div>
         <div class="fibre-stat">
-          <p class="fibre-stat-value">4'000 m</p>
+          <p class="fibre-stat-value counter" data-target="4000">4000</p>
           <p class="fibre-stat-label">Grazing altitude</p>
         </div>
         <div class="fibre-stat">
-          <p class="fibre-stat-value">3 ×</p>
+          <p class="fibre-stat-value counter" data-target="3">3</p>
           <p class="fibre-stat-label">Warmer than wool</p>
         </div>
       </div>
+      <a href="/story" class="fibre-link">Learn about the fibre <span class="link-arrow">&rarr;</span></a>
     </div>
     <div class="fibre-image reveal reveal-d2">
       <img src="/img/craft/cashmere-goat.jpg" alt="Changthangi goat in the Himalayas" loading="lazy">
@@ -822,6 +871,8 @@
       <h2>Hands That Remember</h2>
       <p>In the Kathmandu Valley, cashmere weaving is not a profession — it is inheritance. For three generations, our artisans have transformed the finest Himalayan fibres into heirlooms of warmth.</p>
       <p>From the charkha wheel to the wooden loom, every stage is guided by hands that have practiced this rhythm for decades. No machines. No shortcuts. Just the slow, deliberate cadence of human touch — the same rhythm that has defined Nepalese craft for centuries.</p>
+      <blockquote class="hands-pullquote">The loom sings when the yarn is happy. A scarf woven with joy wraps its wearer in that same song.</blockquote>
+      <p class="hands-attribution">&mdash; Asha, third-generation spinner</p>
       <a href="/story" class="hands-link">Meet the Artisans</a>
     </div>
   </div>
@@ -911,12 +962,43 @@
   </div>
 </section>
 
+<!-- ══════════ ARTISAN VOICES ══════════ -->
+<section class="artisan-voices">
+  <div class="artisan-voices-inner">
+    <div class="artisan-voices-header reveal">
+      <p class="eyebrow">The Hands Behind</p>
+      <h2>Artisan Voices</h2>
+    </div>
+    <div class="artisan-voices-grid">
+      <div class="artisan-voice-card reveal reveal-d1">
+        <div class="artisan-voice-quote-mark">&ldquo;</div>
+        <p class="artisan-voice-text">Every loop I knit carries the warmth of my grandmother's hands guiding mine beneath the Himalayan sun.</p>
+        <p class="artisan-voice-name">Asha</p>
+        <p class="artisan-voice-role">Master Weaver, 28 years</p>
+      </div>
+      <div class="artisan-voice-card reveal reveal-d2">
+        <div class="artisan-voice-quote-mark">&ldquo;</div>
+        <p class="artisan-voice-text">My fingers dance across the needles each morning, weaving warmth for hands that may be far from home.</p>
+        <p class="artisan-voice-name">Pemba</p>
+        <p class="artisan-voice-role">Knitter &amp; Spinner, 22 years</p>
+      </div>
+      <div class="artisan-voice-card reveal reveal-d3">
+        <div class="artisan-voice-quote-mark">&ldquo;</div>
+        <p class="artisan-voice-text">Quality is not a final check — it is present in every step. I feel the garment and know if it is ready to carry our name.</p>
+        <p class="artisan-voice-name">Dolma</p>
+        <p class="artisan-voice-role">Quality Master, 20 years</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════ FINAL CTA ══════════ -->
 <section class="cta-final">
   <div class="cta-final-inner reveal">
-    <h2>Begin Your Own KORA</h2>
+    <p class="eyebrow">Begin</p>
+    <h2>Wrap Yourself in the Himalaya</h2>
     <p>A sacred walk. A circle of warmth. From the highest peaks of Nepal to the quiet elegance of your wardrobe.</p>
-    <a href="/shop" class="btn btn-primary btn-lg">Explore the Collection</a>
+    <a href="/shop" class="btn btn-primary btn-lg">Shop the Collection</a>
   </div>
 </section>
 
@@ -925,42 +1007,61 @@
 <!-- ══════════ FOOTER ══════════ -->
 <footer class="footer">
   <div class="footer-grid">
+    <!-- Brand -->
     <div class="footer-brand">
       <div class="footer-logo">KORA</div>
       <p class="footer-description">Himalayan Cashmere, handcrafted in Nepal. Three generations of artisan tradition, woven into every thread.</p>
     </div>
+
+    <!-- Shop Links -->
     <div>
-      <h4 class="footer-heading">Navigate</h4>
+      <h4 class="footer-heading">Shop</h4>
       <div class="footer-links">
-        <a href="/shop" class="footer-link">Shop</a>
-        <a href="/story" class="footer-link">Our Story</a>
-        <a href="/wholesale" class="footer-link">Wholesale</a>
+        <a href="/shop" class="footer-link">The Collection</a>
+        <a href="/shop" class="footer-link">Sweaters</a>
+        <a href="/shop" class="footer-link">Accessories</a>
         <a href="/size-guide" class="footer-link">Size Guide</a>
-        <a href="mailto:hello@koracashmere.com" class="footer-link">Contact</a>
       </div>
     </div>
+
+    <!-- Atelier -->
+    <div class="footer-atelier">
+      <h4 class="footer-heading">Atelier</h4>
+      <p class="footer-address">Kathmandu Valley<br>Nepal</p>
+      <p><a href="mailto:hello@koracashmere.com" class="footer-link">hello@koracashmere.com</a></p>
+    </div>
+
+    <!-- Newsletter -->
     <div class="footer-newsletter">
       <h4 class="footer-heading">Newsletter</h4>
       <p>Softness, delivered. Be the first to know about new collections, artisan stories, and exclusive releases.</p>
       <form class="newsletter-form" action="https://formspree.io/f/xwpkqyra" method="POST">
         <input type="email" name="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
-        <button type="submit" class="newsletter-submit">Subscribe</button>
+        <button type="submit" class="newsletter-submit" aria-label="Subscribe">&rarr;</button>
       </form>
     </div>
   </div>
+
   <div class="footer-bottom">
-    <span class="footer-bottom-text">&copy; 2026 KORA Cashmere. All rights reserved.</span>
-    <span class="footer-bottom-text">
+    <div class="footer-bottom-bar">
+      <span>&copy; 2026 KORA Cashmere. All rights reserved.</span>
+      <span class="footer-bottom-sep">&middot;</span>
+      <span>Handcrafted in Nepal</span>
+      <span class="footer-bottom-sep">&middot;</span>
+      <a href="https://instagram.com/koracashmere" class="footer-instagram" target="_blank" rel="noopener">Instagram</a>
+      <span class="footer-bottom-sep">&middot;</span>
+      <a href="https://pinterest.com/koracashmere" class="footer-pinterest" target="_blank" rel="noopener">Pinterest</a>
+    </div>
+    <span style="display:flex;gap:12px;">
       <a href="/privacy/" class="footer-link" style="opacity:0.7;font-size:12px;">Privacy Policy</a>
-      <span style="opacity:0.3;margin:0 8px;">·</span>
       <a href="/terms/" class="footer-link" style="opacity:0.7;font-size:12px;">Terms of Service</a>
     </span>
   </div>
 </footer>
 
 <div id="snipcart" data-api-key="YOUR_SNIPCART_KEY" hidden></div>
-<script src="/js/products-v14.js"></script>
-<script src="/js/main-v9.js"></script>
+<script src="/js/products-v15.js"></script>
+<script src="/js/main-v10.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
